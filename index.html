@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mrudula Nimmala — Senior Java Full Stack Developer</title>
+<meta name="description" content="Senior Java Full Stack Developer with 11 years building enterprise platforms across healthcare, retail, financial services and HR/payroll. Java 21, Spring Boot, React, Angular, Kafka, AWS EKS.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Mrudula Nimmala — Senior Java Full Stack Developer">
+<meta property="og:description" content="11 years of enterprise Java: Cardinal Health, Home Depot, TransUnion, ADP, Mastek. Java 21 · Spring Boot · React · Kafka · AWS EKS.">
+<meta property="og:url" content="https://mrudula666.github.io/">
+<meta property="og:image" content="https://mrudula666.github.io/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23163A5F'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='15' font-weight='700' text-anchor='middle' fill='%23F2B33D'%3EMN%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: a career "rail" drawn to scale (months per client) anchors the page; experience reads as a ledger beneath it, then case studies, then the stack. */
+:root{
+  --bg:#F4F6F8; --surface:#FFFFFF; --fg:#13202C; --muted:#56657A; --line:#D9DFE6;
+  --ink:#163A5F; --signal:#C9861A; --signal-soft:#F7E7C6;
+  --on-seg:#FFFFFF; --health:#2E7D6B; --retail:#C2571E; --finance:#3B5BA9; --hr:#7A4E9E; --consult:#5D6B7A;
+  --display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body:"IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono:"JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0D141B; --surface:#141E28; --fg:#E4EAF0; --muted:#97A6B6; --line:#24313E;
+    --ink:#9CC2EA; --signal:#F2B33D; --signal-soft:#3A2E16;
+    --on-seg:#0D141B; --health:#5CC3A8; --retail:#F08A52; --finance:#86A4F0; --hr:#BB93DE; --consult:#9AA8B6;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0D141B; --surface:#141E28; --fg:#E4EAF0; --muted:#97A6B6; --line:#24313E;
+  --ink:#9CC2EA; --signal:#F2B33D; --signal-soft:#3A2E16;
+  --on-seg:#0D141B; --health:#5CC3A8; --retail:#F08A52; --finance:#86A4F0; --hr:#BB93DE; --consult:#9AA8B6;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto} *{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 var(--body);-webkit-font-smoothing:antialiased}
+a{color:var(--ink);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--signal);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(20px, env(safe-area-inset-left, 0px));padding-right:max(20px, env(safe-area-inset-right, 0px))}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.1}
+.label{font:600 .72rem/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+
+/* nav */
+.nav{position:sticky;top:env(safe-area-inset-top, 0px);z-index:10;background:color-mix(in srgb, var(--bg) 88%, transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
+.mark{font:700 .95rem var(--mono);color:var(--fg);text-decoration:none}
+.mark span{color:var(--signal)}
+.nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-size:.9rem}
+.nav ul a{color:var(--muted);text-decoration:none}
+.nav ul a:hover{color:var(--fg)}
+@media (max-width:640px){.nav ul{display:none}}
+
+/* hero */
+.hero{padding-block:72px 40px}
+.hero .label{display:inline-flex;gap:10px;align-items:center}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--health);box-shadow:0 0 0 4px color-mix(in srgb, var(--health) 22%, transparent)}
+.hero h1{font-size:clamp(2.6rem, 7vw, 5rem);font-weight:800;letter-spacing:-.02em;margin-top:18px}
+.hero h1 em{font-style:normal;color:var(--ink)}
+.hero .role{font:500 clamp(1.1rem, 2.4vw, 1.45rem)/1.4 var(--display);color:var(--muted);margin-top:12px}
+.hero p.lede{max-width:62ch;font-size:1.08rem;margin-top:22px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:8px;font-weight:600;font-size:.95rem;text-decoration:none;border:1px solid var(--line);color:var(--fg);background:var(--surface);cursor:pointer;font-family:var(--body)}
+.btn.primary{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.btn:hover{transform:translateY(-1px)}
+.btn{transition:transform .15s}
+
+/* career rail — the one bold element */
+.rail-sec{padding-block:24px 56px}
+.rail-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.rail-head h2{font-size:1.15rem;font-weight:700}
+.rail{display:flex;gap:4px;height:84px}
+.seg{position:relative;border-radius:6px;padding:10px 12px;color:var(--on-seg);text-decoration:none;overflow:hidden;min-width:0;display:flex;flex-direction:column;justify-content:space-between;transition:filter .15s}
+.seg:hover{filter:brightness(1.08)}
+.seg b{font:700 .95rem/1.15 var(--display);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.seg small{font:600 .7rem/1 var(--mono);opacity:.9;white-space:nowrap}
+.s-mastek{flex:18;background:var(--consult)} .s-adp{flex:31;background:var(--hr)} .s-tu{flex:34;background:var(--finance)} .s-hd{flex:22;background:var(--retail)} .s-ch{flex:32;background:var(--health)}
+.ticks{display:flex;justify-content:space-between;margin-top:8px;font:500 .72rem var(--mono);color:var(--muted);font-variant-numeric:tabular-nums}
+.java{display:flex;gap:4px;margin-top:14px}
+.java div{border-top:2px solid var(--signal);padding-top:6px;font:600 .74rem var(--mono);color:var(--muted);min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.java div span{color:var(--fg)}
+@media (max-width:640px){
+  .rail{flex-direction:column;height:auto}
+  .seg{flex:none!important;min-height:52px;flex-direction:row;align-items:center;gap:10px}
+  .ticks,.java{display:none}
+}
+
+/* stats band */
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.facts div{background:var(--surface);padding:20px}
+.facts strong{display:block;font:800 2rem/1 var(--display);color:var(--ink);font-variant-numeric:tabular-nums}
+.facts span{display:block;margin-top:8px;font-size:.88rem;color:var(--muted)}
+@media (max-width:760px){.facts{grid-template-columns:repeat(2,1fr)}}
+
+section.block{padding-block:72px 8px}
+.sec-title{display:flex;align-items:baseline;gap:14px;margin-bottom:28px;flex-wrap:wrap}
+.sec-title h2{font-size:clamp(1.7rem, 3.4vw, 2.3rem);font-weight:800;letter-spacing:-.01em}
+
+/* experience ledger */
+.job{display:grid;grid-template-columns:220px 1fr;gap:32px;padding-block:36px;border-top:1px solid var(--line)}
+.job:first-of-type{border-top:0;padding-top:4px}
+.job aside{min-width:0}
+.job .when{font:600 .82rem var(--mono);color:var(--fg);font-variant-numeric:tabular-nums}
+.job .where{font-size:.88rem;color:var(--muted);margin-top:4px}
+.domain{display:inline-block;margin-top:14px;padding:4px 10px;border-radius:999px;font:600 .72rem var(--mono);letter-spacing:.04em;border:1px solid currentColor}
+.d-health{color:var(--health)} .d-retail{color:var(--retail)} .d-finance{color:var(--finance)} .d-hr{color:var(--hr)} .d-consult{color:var(--consult)}
+.job .body{min-width:0}
+.job h3{font-size:1.6rem;font-weight:800}
+.job .title{font-weight:600;color:var(--muted);margin-top:4px}
+.job .pd{margin-top:14px;max-width:68ch}
+.job ul{margin:16px 0 0;padding-left:1.1rem;max-width:70ch}
+.job li{margin-top:8px}
+.job li::marker{color:var(--signal)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}
+.chip{font:500 .76rem var(--mono);padding:4px 9px;border-radius:5px;background:var(--surface);border:1px solid var(--line);color:var(--fg)}
+@media (max-width:760px){.job{grid-template-columns:1fr;gap:12px}}
+
+/* case studies */
+.cases{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.case{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:24px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.case .from{font:600 .72rem var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.case h3{font-size:1.25rem;font-weight:700}
+.case dl{margin:0;display:grid;gap:10px}
+.case dt{font:600 .72rem var(--mono);color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.case dd{margin:2px 0 0;font-size:.95rem}
+.case.wide{grid-column:1 / -1}
+@media (max-width:760px){.cases{grid-template-columns:1fr}}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:28px 32px}
+.skills h3{font:600 .78rem var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.skills p{margin:0;font-size:.95rem}
+@media (max-width:760px){.skills{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.skills{grid-template-columns:1fr}}
+
+/* how I work */
+.principles{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.principles h3{font-size:1.1rem;font-weight:700;margin-bottom:8px}
+.principles p{margin:0;color:var(--muted);font-size:.95rem}
+@media (max-width:760px){.principles{grid-template-columns:1fr}}
+
+/* contact */
+.contact{margin-top:72px;background:var(--ink);color:var(--bg);border-radius:14px;padding:44px clamp(22px,5vw,52px);display:grid;grid-template-columns:1.4fr 1fr;gap:28px;align-items:center}
+.contact h2{font-size:clamp(1.6rem,3.4vw,2.3rem);font-weight:800}
+.contact p{margin:12px 0 0;opacity:.85;max-width:52ch}
+.contact .lines{display:grid;gap:10px;font:500 .95rem var(--mono);min-width:0}
+.contact .lines a{color:var(--bg);word-break:break-all}
+.contact .lines span{opacity:.7;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;display:block}
+@media (max-width:760px){.contact{grid-template-columns:1fr}}
+footer{padding-block:36px 48px;color:var(--muted);font-size:.85rem;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="mark" href="#top">mrudula<span>.</span>nimmala</a>
+    <ul>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#work">Case studies</a></li>
+      <li><a href="#stack">Stack</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="top">
+  <header class="hero wrap">
+    <div class="label"><i class="dot" aria-hidden="true"></i>Open to Senior Java / Full Stack / Lead roles · USA</div>
+    <h1>Mrudula <em>Nimmala</em></h1>
+    <div class="role">Senior Full Stack Java Developer · 11 years · Java 21 · Spring Boot · React · Kafka · AWS</div>
+    <p class="lede">I build and run enterprise platforms where correctness matters: pharmaceutical distribution for hospitals, B2B bulk ordering at retail scale, identity and fraud verification for financial services, and HR/payroll self-service. My work spans the whole path, from React and Angular screens through Spring Boot microservices and Kafka events to Kubernetes deployments on AWS.</p>
+    <div class="cta">
+      <a class="btn primary" href="https://www.linkedin.com/in/mrudula-nimmala/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+      <a class="btn" href="#experience">See experience</a>
+      <a class="btn" href="mailto:mrudulan6@gmail.com">mrudulan6@gmail.com</a>
+    </div>
+  </header>
+
+  <section class="rail-sec wrap" aria-labelledby="rail-h">
+    <div class="rail-head">
+      <h2 id="rail-h">Career at a glance</h2>
+      <span class="label">Drawn to scale · May 2015 → present</span>
+    </div>
+    <div class="rail">
+      <a class="seg s-mastek" href="#mastek"><b>Mastek</b><small>2015–16</small></a>
+      <a class="seg s-adp" href="#adp"><b>ADP</b><small>2016–19</small></a>
+      <a class="seg s-tu" href="#transunion"><b>TransUnion</b><small>2019–22</small></a>
+      <a class="seg s-hd" href="#homedepot"><b>Home Depot</b><small>2022–24</small></a>
+      <a class="seg s-ch" href="#cardinal"><b>Cardinal Health</b><small>2024–now</small></a>
+    </div>
+    <div class="ticks" aria-hidden="true"><span>2015</span><span>2017</span><span>2019</span><span>2021</span><span>2023</span><span>2025</span><span>2026</span></div>
+    <div class="java" aria-label="Java versions used over time">
+      <div style="flex:49"><span>Java 8</span> · Boot 1.x</div>
+      <div style="flex:34"><span>Java 11</span> · Boot 2.x</div>
+      <div style="flex:22"><span>Java 11/17</span></div>
+      <div style="flex:32"><span>Java 21</span> · Boot 3.x</div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="facts">
+      <div><strong>11</strong><span>years building enterprise Java systems</span></div>
+      <div><strong>5</strong><span>clients across healthcare, retail, finance, HR</span></div>
+      <div><strong>8 → 21</strong><span>Java versions shipped to production</span></div>
+      <div><strong>~90%</strong><span>unit-test coverage reached on the Mastek storefront</span></div>
+    </div>
+  </div>
+
+  <section class="block wrap" id="experience" aria-labelledby="exp-h">
+    <div class="sec-title"><h2 id="exp-h">Experience</h2><span class="label">Most recent first</span></div>
+
+    <article class="job" id="cardinal">
+      <aside>
+        <div class="when">Mar 2024 – Present</div>
+        <div class="where">Dublin, OH</div>
+        <span class="domain d-health">Healthcare · HIPAA</span>
+      </aside>
+      <div class="body">
+        <h3>Cardinal Health</h3>
+        <div class="title">Senior Full Stack Developer · Tech lead, onboarding &amp; fulfilment microservices</div>
+        <p class="pd">AI-enabled pharmaceutical supply chain and distribution platform that moves product from manufacturers and distribution centres to hospitals and clinics. It covers customer onboarding, order capture, pricing validation, inventory allocation, warehouse fulfilment, shipment tracking, returns, recalls and exception reporting.</p>
+        <ul>
+          <li>Built Java 21 and Spring Boot 3.x microservices with versioned REST APIs for onboarding, order validation and downstream processing, plus React and TypeScript dashboards (Hooks, Redux Toolkit, lazy-loaded routes) for order and inventory visibility.</li>
+          <li>Split data by access pattern as volume grew: MySQL for transactions, DynamoDB for high-volume audit records, S3 for archives, Redis cache-aside with TTL for hot pricing and inventory, and Elasticsearch for product search.</li>
+          <li>Published allocated-order events with Spring Kafka to drive warehouse, shipment and reporting workflows, using consumer groups and correlation IDs for traceable, reliable processing.</li>
+          <li>Built a Claude AI semantic order search with Spring AI and Elasticsearch so customers can find orders in plain language, with audit logging on every AI-assisted response.</li>
+          <li>Secured service calls with OAuth 2.0 and least-privilege AWS IAM policies; shipped through Docker, Amazon EKS, GitHub Actions and AWS CodePipeline behind SonarQube quality gates.</li>
+          <li>Mentor junior developers through design reviews and debugging sessions, and coordinate offshore teams with daily cross-time-zone standups and technical handoff specs.</li>
+        </ul>
+        <div class="chips"><span class="chip">Java 21</span><span class="chip">Spring Boot 3.x</span><span class="chip">Spring AI</span><span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">Kafka</span><span class="chip">MySQL</span><span class="chip">DynamoDB</span><span class="chip">Redis</span><span class="chip">Elasticsearch</span><span class="chip">Amazon EKS</span><span class="chip">GitHub Actions</span><span class="chip">CloudWatch</span><span class="chip">OAuth 2.0</span></div>
+      </div>
+    </article>
+
+    <article class="job" id="homedepot">
+      <aside>
+        <div class="when">May 2022 – Feb 2024</div>
+        <div class="where">Atlanta, GA</div>
+        <span class="domain d-retail">Retail · B2B e-commerce</span>
+      </aside>
+      <div class="body">
+        <h3>Home Depot</h3>
+        <div class="title">Senior Full Stack Developer</div>
+        <p class="pd">B2B bulk order management and omnichannel fulfilment platform for contractors, builders and enterprise customers across web, mobile, store and assisted-sales channels: account validation, customer-specific pricing, bulk carts, inventory reservation, split fulfilment and refunds.</p>
+        <ul>
+          <li>Delivered the bulk-order flow end to end, from React and TypeScript storefront screens through secured Spring Boot APIs to PostgreSQL, Redis, Kafka events and Camunda-orchestrated split fulfilment.</li>
+          <li>Prevented duplicate orders under concurrent load with PostgreSQL-backed idempotency keys and line-level reservation state persisted before any downstream call.</li>
+          <li>Kept large multi-line orders responsive at peak traffic with virtualized rendering, memoized selectors, pagination and debounced API calls.</li>
+          <li>Exposed REST and GraphQL through Amazon API Gateway, secured with Spring Security, OAuth 2.0, JWT and RBAC via a centralized security service.</li>
+          <li>Integrated downstream systems with Apache Camel routes and RabbitMQ, and ran high-volume Spring Batch jobs with restart and recovery.</li>
+          <li>Led recovery of a P1 incident caused by a cross-environment secrets reference, then added deployment checks that block configuration leakage.</li>
+        </ul>
+        <div class="chips"><span class="chip">Java 11/17</span><span class="chip">Spring Boot</span><span class="chip">React</span><span class="chip">Redux Toolkit</span><span class="chip">GraphQL</span><span class="chip">PostgreSQL</span><span class="chip">MongoDB</span><span class="chip">Kafka</span><span class="chip">RabbitMQ</span><span class="chip">Camunda BPMN</span><span class="chip">Apache Camel</span><span class="chip">Kubernetes</span><span class="chip">Terraform</span><span class="chip">Harness</span><span class="chip">Prometheus</span></div>
+      </div>
+    </article>
+
+    <article class="job" id="transunion">
+      <aside>
+        <div class="when">Jul 2019 – Apr 2022</div>
+        <div class="where">Chicago, IL</div>
+        <span class="domain d-finance">Financial services · Fraud &amp; KYC</span>
+      </aside>
+      <div class="body">
+        <h3>TransUnion</h3>
+        <div class="title">Java Full Stack Developer</div>
+        <p class="pd">Customer identity verification and fraud-risk platform for new-account opening, loan processing, new-device access, document verification, OTP authentication and high-risk transaction review, integrating TruValidate and iovation.</p>
+        <ul>
+          <li>Delivered the identity-verification and fraud-risk flow from Angular and TypeScript channels through Amazon API Gateway and Java 11 Spring Boot services, with Oracle persistence via Spring Data JPA and Hibernate.</li>
+          <li>Decoupled OTP, fraud-alert and verification-status processing with Kafka: consumer groups, retries, idempotent consumers and dead-letter topics.</li>
+          <li>Used gRPC with Protocol Buffer contracts for low-latency internal calls and REST for external integrations.</li>
+          <li>Enforced least-privilege access with Spring Security, OAuth 2.0 and AWS IAM; kept secrets in HashiCorp Vault and config in Spring Cloud Config.</li>
+          <li>Cut diagnosis time by centralizing service, Kafka and integration logs in Splunk and tracing requests with correlation IDs.</li>
+        </ul>
+        <div class="chips"><span class="chip">Java 11</span><span class="chip">Spring Boot 2.x</span><span class="chip">Angular</span><span class="chip">Oracle</span><span class="chip">Kafka</span><span class="chip">gRPC</span><span class="chip">Amazon SNS</span><span class="chip">HashiCorp Vault</span><span class="chip">Amazon EKS</span><span class="chip">Splunk</span></div>
+      </div>
+    </article>
+
+    <article class="job" id="adp">
+      <aside>
+        <div class="when">Dec 2016 – Jun 2019</div>
+        <div class="where">Roseland, NJ</div>
+        <span class="domain d-hr">HR &amp; Payroll</span>
+      </aside>
+      <div class="body">
+        <h3>ADP</h3>
+        <div class="title">Java Full Stack Developer</div>
+        <p class="pd">Cloud-based HR, payroll and employee self-service platform covering employee profiles, payroll processing, direct deposit, tax deductions, benefits enrolment, time and attendance, PTO and manager approvals.</p>
+        <ul>
+          <li>Built Java 8 and Spring Boot services with Spring MVC, REST and Hibernate for profiles, payroll calculations, benefits and approvals.</li>
+          <li>Built React and Redux self-service modules for payroll dashboards, benefits enrolment and approval workflows.</li>
+          <li>Reduced repeated database calls with Redis caching of reference data, and automated payroll updates and reconciliation with ActiveMQ and Spring Batch.</li>
+          <li>Containerized services with Docker on GKE, with Jenkins pipelines and SonarQube gates.</li>
+        </ul>
+        <div class="chips"><span class="chip">Java 8</span><span class="chip">Spring Boot</span><span class="chip">React</span><span class="chip">Redux</span><span class="chip">MySQL</span><span class="chip">Redis</span><span class="chip">ActiveMQ</span><span class="chip">Spring Batch</span><span class="chip">GKE</span><span class="chip">Jenkins</span></div>
+      </div>
+    </article>
+
+    <article class="job" id="mastek">
+      <aside>
+        <div class="when">May 2015 – Oct 2016</div>
+        <div class="where">Mumbai, India</div>
+        <span class="domain d-consult">Consulting · Retail mobile</span>
+      </aside>
+      <div class="body">
+        <h3>Mastek <span style="font-weight:500;color:var(--muted);font-size:1rem">for TotalEnergies</span></h3>
+        <div class="title">Java Developer</div>
+        <p class="pd">Retail mobile storefront supporting product search, cart, checkout, order placement, customer profiles, order tracking and loyalty rewards.</p>
+        <ul>
+          <li>Built Java 8 and Spring Boot services with Hibernate/JPA and REST, plus reusable Angular storefront components.</li>
+          <li>Implemented loyalty-rewards workflows: enrolment, points calculation, redemption validation and checkout benefits.</li>
+          <li>Connected the storefront to enterprise systems with Apache Camel routes and SOAP/XML integrations.</li>
+          <li>Raised unit-test coverage to about 90% across catalog, cart, checkout and order tracking.</li>
+        </ul>
+        <div class="chips"><span class="chip">Java 8</span><span class="chip">Spring Boot</span><span class="chip">Angular</span><span class="chip">Hibernate</span><span class="chip">Apache Camel</span><span class="chip">SOAP</span><span class="chip">Azure</span><span class="chip">JUnit</span></div>
+      </div>
+    </article>
+  </section>
+
+  <section class="block wrap" id="work" aria-labelledby="work-h">
+    <div class="sec-title"><h2 id="work-h">Case studies</h2><span class="label">Problems I owned</span></div>
+    <div class="cases">
+      <article class="case">
+        <div class="from d-retail">Home Depot · Concurrency</div>
+        <h3>No duplicate bulk orders, even on retry</h3>
+        <dl>
+          <dt>Problem</dt><dd>Contractors submit large multi-line orders from several channels. Network retries and double-clicks could create the same order twice and over-reserve stock.</dd>
+          <dt>Approach</dt><dd>Idempotency keys enforced in PostgreSQL, with the order header and line-level reservation state written before any downstream call. Camunda then orchestrated split fulfilment.</dd>
+          <dt>Result</dt><dd>Retries became safe, and reservations stayed consistent across concurrent bulk orders.</dd>
+        </dl>
+      </article>
+      <article class="case">
+        <div class="from d-health">Cardinal Health · AI</div>
+        <h3>Semantic order search with Claude</h3>
+        <dl>
+          <dt>Problem</dt><dd>Customers lost time finding orders with exact-match search fields.</dd>
+          <dt>Approach</dt><dd>Order and product data embedded in Elasticsearch, with Claude via Spring AI interpreting natural-language queries and ranking results.</dd>
+          <dt>Result</dt><dd>Faster order lookup, with every AI-assisted answer audit-logged for a HIPAA-regulated environment.</dd>
+        </dl>
+      </article>
+      <article class="case">
+        <div class="from d-health">Cardinal Health · Data architecture</div>
+        <h3>One store per access pattern</h3>
+        <dl>
+          <dt>Problem</dt><dd>A single database couldn't serve transactions, high-volume audit logs, archives and fast lookups efficiently as volume grew.</dd>
+          <dt>Approach</dt><dd>MySQL for transactions, DynamoDB for audit records, S3 for archives, Redis cache-aside with TTL for pricing and inventory, Elasticsearch for search.</dd>
+          <dt>Result</dt><dd>Lower database load on the hot paths, with each workload on storage built for it.</dd>
+        </dl>
+      </article>
+      <article class="case">
+        <div class="from d-finance">TransUnion · Event-driven</div>
+        <h3>Fraud and OTP events that never get lost</h3>
+        <dl>
+          <dt>Problem</dt><dd>Identity checks, OTP delivery and fraud alerts were tightly coupled, so one slow dependency held up the rest.</dd>
+          <dt>Approach</dt><dd>Kafka topics per event type, idempotent consumers, retries and dead-letter topics, with Amazon SNS for time-sensitive customer notifications.</dd>
+          <dt>Result</dt><dd>Verification stayed responsive, and failed messages were isolated for reprocessing instead of blocking the flow.</dd>
+        </dl>
+      </article>
+      <article class="case wide">
+        <div class="from d-retail">Home Depot · Production incident</div>
+        <h3>P1: production pointing at a lower-environment secret</h3>
+        <dl>
+          <dt>Problem</dt><dd>A Kubernetes deployment referenced a lower-environment AWS Secrets Manager path, so customer-data endpoints resolved incorrectly in production.</dd>
+          <dt>Approach</dt><dd>Traced it through pod configuration and environment-specific properties, corrected the deployment config and secret reference, validated connectivity and coordinated recovery.</dd>
+          <dt>Result</dt><dd>Service restored, and new deployment checks now stop cross-environment configuration from reaching production.</dd>
+        </dl>
+      </article>
+    </div>
+  </section>
+
+  <section class="block wrap" id="stack" aria-labelledby="stack-h">
+    <div class="sec-title"><h2 id="stack-h">Stack</h2><span class="label">Used on client projects</span></div>
+    <div class="skills">
+      <div><h3>Backend</h3><p>Java 8 / 11 / 17 / 21, Spring Boot 1.x–3.x, Spring MVC, Spring Security, Spring Data JPA, Spring Batch, Spring AI, Hibernate, Apache Camel, gRPC</p></div>
+      <div><h3>Frontend</h3><p>React, Redux Toolkit, React Router, TypeScript, Angular, Angular Material, RxJS, HTML, CSS</p></div>
+      <div><h3>APIs &amp; messaging</h3><p>REST, GraphQL, SOAP, OpenAPI, Apache Kafka, RabbitMQ, ActiveMQ, Amazon SNS, Camunda BPMN</p></div>
+      <div><h3>Data</h3><p>PostgreSQL, MySQL, Oracle, MongoDB, DynamoDB, Redis, Elasticsearch, Amazon S3</p></div>
+      <div><h3>Cloud &amp; DevOps</h3><p>AWS (EKS, IAM, API Gateway, CloudWatch, Secrets Manager), GCP (GKE), Azure, Docker, Kubernetes, Helm, Terraform, Jenkins, GitHub Actions, Harness</p></div>
+      <div><h3>Security &amp; quality</h3><p>OAuth 2.0, JWT, RBAC, HashiCorp Vault, JUnit, Mockito, Postman/Newman, SonarQube, Splunk, Prometheus</p></div>
+    </div>
+  </section>
+
+  <section class="block wrap" aria-labelledby="how-h">
+    <div class="sec-title"><h2 id="how-h">How I work</h2></div>
+    <div class="principles">
+      <div><h3>Design for the failure case</h3><p>Idempotency, retries, dead-letter topics and clear rollback paths go in from the start, not after the first incident.</p></div>
+      <div><h3>Own it through production</h3><p>I ship with health checks, structured logs and correlation IDs, so when something breaks I can find it quickly.</p></div>
+      <div><h3>Raise the team</h3><p>Design reviews, code reviews, pairing on defects and clear handoff specs for offshore teams keep delivery predictable.</p></div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <section class="contact" id="contact" aria-labelledby="contact-h">
+      <div>
+        <h2 id="contact-h">Let's talk about your next platform.</h2>
+        <p>Open to Senior Java Full Stack, Backend Java, Java Lead and Java + AWS roles across the USA.</p>
+      </div>
+      <div class="lines">
+        <div><span>Email</span><a href="mailto:mrudulan6@gmail.com">mrudulan6@gmail.com</a></div>
+        <div><span>LinkedIn</span><a href="https://www.linkedin.com/in/mrudula-nimmala/" target="_blank" rel="noopener">linkedin.com/in/mrudula-nimmala</a></div>
+      </div>
+    </section>
+    <footer>
+      <span>© 2026 Mrudula Nimmala</span>
+      <span>B.Tech, Computer Science &amp; Engineering · JNTU Kakinada</span>
+    </footer>
+  </div>
+</main>
+</body>
+</html>
