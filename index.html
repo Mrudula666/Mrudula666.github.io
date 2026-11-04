@@ -414,7 +414,7 @@ footer{padding-block:36px 48px;color:var(--muted);font-size:.85rem;display:flex;
         <div class="top"><span class="from d-health">Cardinal Health · Platform</span><span class="metric">90 → 35 min releases</span></div>
         <h3>Moving supply chain services from PCF to GKE</h3>
         <dl>
-          <dt>Problem</dt><dd>Onboarding and fulfilment services on PCF (Tanzu) had slow, manual-heavy releases and platform-bound configuration.</dd>
+          <dt>Problem</dt><dd>Onboarding and fulfilment microservices ran on PCF (Tanzu) and had to move to GKE without breaking hospital and clinic integrations.</dd>
           <dt>Approach</dt><dd>Service-by-service cutover: buildpacks became Dockerfiles, manifests became Helm values, and service bindings moved to Secret Manager with Workload Identity. Concourse runs build, test, scan and deploy, with Cloud Build images in Artifact Registry and Python deployment checks.</dd>
           <dt>Result</dt><dd>Average release time fell from ~90 to ~35 minutes, with health and latency visible in Cloud Monitoring.</dd>
         </dl>
@@ -423,7 +423,7 @@ footer{padding-block:36px 48px;color:var(--muted);font-size:.85rem;display:flex;
         <div class="top"><span class="from d-health">Cardinal Health · Data</span><span class="metric">p95 350 → 120 ms</span></div>
         <h3>One store per access pattern</h3>
         <dl>
-          <dt>Problem</dt><dd>One transactional database was serving orders, audit history, archives, search and hot pricing reads at peak.</dd>
+          <dt>Problem</dt><dd>Orders, pricing, audit data, archives and product search have very different access patterns, and peak pricing lookups were driving repeated database reads.</dd>
           <dt>Approach</dt><dd>Cloud SQL for orders and pricing, BigQuery for audit and reporting, Cloud Storage for archives, Elasticsearch for search, and Memorystore cache-aside with TTL for pricing. Final order validation always reads Cloud SQL, so a stale cache can never price an order.</dd>
           <dt>Result</dt><dd>~40% fewer pricing reads, and p95 pricing lookups fell from ~350 ms to ~120 ms at peak.</dd>
         </dl>
@@ -432,16 +432,16 @@ footer{padding-block:36px 48px;color:var(--muted);font-size:.85rem;display:flex;
         <div class="top"><span class="from d-retail">Home Depot · Payments</span><span class="metric">PCI DSS</span></div>
         <h3>Capture per shipment, never charge twice</h3>
         <dl>
-          <dt>Problem</dt><dd>Split B2B orders ship from several locations, but customers should be charged only for what actually ships, and retries must never double-charge.</dd>
+          <dt>Problem</dt><dd>Split B2B orders ship in parts, so payment has to be captured per shipment, support partial refunds, and stay safe under retries.</dd>
           <dt>Approach</dt><dd>A Spring Boot Payment Service on a third-party gateway with tokenized cards: authorize at checkout, capture per shipment, refund partially, guard every call with an idempotency key, publish status on RabbitMQ, and reconcile settlement from S3 with Airflow.</dd>
-          <dt>Result</dt><dd>Correct charges on split shipments, safe retries, and a daily reconciliation trail for finance.</dd>
+          <dt>Result</dt><dd>Customers are charged per shipment on split orders, and retries never double-charge.</dd>
         </dl>
       </article>
       <article class="case">
         <div class="top"><span class="from d-retail">Home Depot · Concurrency</span><span class="metric">weekly → ~monthly</span></div>
         <h3>No duplicate bulk orders under retry</h3>
         <dl>
-          <dt>Problem</dt><dd>Concurrent bulk submissions, network retries and double clicks were creating duplicate orders and over-reserving stock.</dd>
+          <dt>Problem</dt><dd>Concurrent bulk submissions from contractors and enterprise customers were creating duplicate orders.</dd>
           <dt>Approach</dt><dd>Persist the idempotency key, order header and line-level reservation state in PostgreSQL before any downstream call. Camunda then orchestrates split fulfilment and exception recovery.</dd>
           <dt>Result</dt><dd>Duplicate-order tickets dropped from a few per week to about one a month.</dd>
         </dl>
@@ -459,8 +459,8 @@ footer{padding-block:36px 48px;color:var(--muted);font-size:.85rem;display:flex;
         <div class="top"><span class="from d-finance">TransUnion · Performance</span><span class="metric">1.8 s → 450 ms</span></div>
         <h3>Fixing the slowest verification queries</h3>
         <dl>
-          <dt>Problem</dt><dd>Identity-verification lookups on Oracle were slowing account opening and loan checks for banking clients.</dd>
-          <dt>Approach</dt><dd>Read execution plans, added targeted indexes and reshaped queries behind Spring Data JPA and Hibernate, without weakening transactional consistency or the audit trail.</dd>
+          <dt>Problem</dt><dd>Slow identity-verification queries on Oracle were holding up account-opening and loan verification flows.</dd>
+          <dt>Approach</dt><dd>Indexing and execution-plan tuning on Oracle behind Spring Data JPA and Hibernate, keeping profiles, verification status, OTP state and fraud records consistent.</dd>
           <dt>Result</dt><dd>p95 on the slow queries fell from ~1.8 s to ~450 ms.</dd>
         </dl>
       </article>
@@ -469,7 +469,7 @@ footer{padding-block:36px 48px;color:var(--muted);font-size:.85rem;display:flex;
         <h3>P1: production reading a QA secret</h3>
         <dl>
           <dt>Problem</dt><dd>A Helm values change made a production Kubernetes deployment read a QA AWS Secrets Manager path, and customer order-history calls began failing.</dd>
-          <dt>Approach</dt><dd>Traced the failure through pod configuration to the bad secret path, rolled back, and verified connectivity with the downstream teams.</dd>
+          <dt>Approach</dt><dd>Traced the failure through pod configuration to the wrong secret path and rolled back.</dd>
           <dt>Result</dt><dd>Service restored in ~70 minutes. A new CI check now validates secret paths per environment before every production deployment.</dd>
         </dl>
       </article>
