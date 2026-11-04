@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Mrudula Nimmala — Senior Java Full Stack Developer</title>
-<meta name="description" content="Senior Java Full Stack Developer with 11 years building enterprise platforms across healthcare, retail, financial services and HR/payroll. Java 21, Spring Boot, React, Angular, Kafka, AWS EKS.">
+<meta name="description" content="Senior Java Full Stack Developer with 11 years building pharma supply chain, B2B order and payment, identity-verification and payroll platforms. Java 21, Spring Boot 3, Angular, React, Kafka, GCP and AWS.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Mrudula Nimmala — Senior Java Full Stack Developer">
-<meta property="og:description" content="11 years of enterprise Java: Cardinal Health, Home Depot, TransUnion, ADP, Mastek. Java 21 · Spring Boot · React · Kafka · AWS EKS.">
+<meta property="og:description" content="11 years of enterprise Java across Cardinal Health, Home Depot, TransUnion, ADP and Mastek. Java 21 · Spring Boot 3 · Angular · React · Kafka · GCP · AWS.">
 <meta property="og:url" content="https://mrudula666.github.io/">
 <meta property="og:image" content="https://mrudula666.github.io/og.png">
 <meta property="og:image:width" content="1200">
@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap">
 <style>
-/* Layout: full-bleed evergreen hero band with the portrait standing in a lit arch; career rail drawn to scale below; experience as a ledger, then case studies and stack. */
+/* Layout: evergreen hero band with portrait in a lit arch; career rail drawn to scale with Java and cloud strips; impact strip; experience ledger with request paths; case studies; domains; stack. */
 :root{
   --bg:#F1F5F3; --surface:#FFFFFF; --fg:#10201D; --muted:#53655F; --line:#D3DFDA;
   --ink:#0F5247; --signal:#B9781F; --signal-soft:#F3E3C6;
@@ -183,6 +183,42 @@ section.block{padding-block:72px 8px}
 .contact .lines span{opacity:.7;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;display:block}
 @media (max-width:760px){.contact{grid-template-columns:1fr}}
 footer{padding-block:36px 48px;color:var(--muted);font-size:.85rem;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+/* impact strip — numbers from the resume */
+.impact{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.impact div{background:var(--surface);padding:22px 20px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.impact .from{font:600 .68rem var(--mono);letter-spacing:.1em;text-transform:uppercase}
+.impact strong{font:400 clamp(1.7rem,3vw,2.2rem)/1 var(--display);color:var(--ink);font-variant-numeric:tabular-nums;white-space:nowrap}
+.impact strong s{text-decoration:none;color:var(--muted);font-size:.62em;margin-right:6px}
+.impact span{font-size:.88rem;color:var(--muted)}
+@media (max-width:860px){.impact{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:420px){.impact{grid-template-columns:1fr}}
+
+/* cloud strip under the rail */
+.cloud{display:flex;gap:4px;margin-top:10px}
+.cloud div{border-top:2px solid var(--line);padding-top:6px;font:600 .74rem var(--mono);color:var(--muted);min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cloud div span{color:var(--fg)}
+@media (max-width:640px){.cloud{display:none}}
+
+/* architecture flow line per client */
+.flow{margin-top:18px;padding:12px 14px;border-radius:8px;background:var(--surface);border:1px solid var(--line);font:500 .78rem/1.7 var(--mono);color:var(--muted);overflow-x:auto}
+.flow b{color:var(--fg);font-weight:600}
+.flow i{font-style:normal;color:var(--signal);padding-inline:4px}
+.flow::before{content:"Request path";display:block;font:600 .66rem var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.job li strong{font-weight:700;color:var(--fg)}
+
+/* case metric */
+.case .top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.case .metric{font:600 .78rem var(--mono);padding:4px 10px;border-radius:999px;background:var(--signal-soft);color:var(--fg);white-space:nowrap}
+
+/* domains */
+.domains{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.dom{border-top:3px solid currentColor;padding-top:16px;min-width:0}
+.dom h3{font-size:1.25rem;font-weight:400;color:var(--fg)}
+.dom p{margin:8px 0 0;font-size:.92rem;color:var(--muted)}
+.dom .tags{margin-top:12px;font:600 .72rem/1.7 var(--mono);color:var(--fg)}
+@media (max-width:860px){.domains{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:480px){.domains{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -193,6 +229,7 @@ footer{padding-block:36px 48px;color:var(--muted);font-size:.85rem;display:flex;
     <ul>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#work">Case studies</a></li>
+      <li><a href="#domains">Domains</a></li>
       <li><a href="#stack">Stack</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -203,20 +240,20 @@ footer{padding-block:36px 48px;color:var(--muted);font-size:.85rem;display:flex;
   <div class="hero-band">
   <header class="hero wrap">
    <div class="hero-text">
-    <div class="label"><i class="dot" aria-hidden="true"></i>Open to Senior Java / Full Stack / Lead roles · USA</div>
+    <div class="label"><i class="dot" aria-hidden="true"></i>Open to Senior Java Full Stack roles · USA</div>
     <h1>Mrudula <em>Nimmala</em></h1>
-    <div class="role">Senior Full Stack Java Developer · 11 years · Java 21 · Spring Boot · React · Kafka · AWS</div>
-    <p class="lede">I build and run enterprise platforms where correctness matters: pharmaceutical distribution for hospitals, B2B bulk ordering at retail scale, identity and fraud verification for financial services, and HR/payroll self-service. My work spans the whole path, from React and Angular screens through Spring Boot microservices and Kafka events to Kubernetes deployments on AWS.</p>
+    <div class="role">Senior Java Full Stack Developer · 11 years · Java 21 · Spring Boot 3 · Angular · React · Kafka · GCP · AWS</div>
+    <p class="lede">I design, build and run the Java systems behind regulated, high-volume businesses: pharmaceutical distribution with DSCSA serialization, B2B ordering and PCI card payments, identity and fraud verification, and payroll with NACHA direct deposit. I own services from the API contract to the on-call pager, across Angular and React front ends, Spring Boot microservices, Kafka events and Kubernetes on GCP and AWS.</p>
     <div class="cta">
       <a class="btn primary" href="https://www.linkedin.com/in/mrudula-nimmala/" target="_blank" rel="noopener">Connect on LinkedIn</a>
-      <a class="btn" href="#experience">See experience</a>
+      <a class="btn" href="#work">See case studies</a>
       <a class="btn" href="mailto:mrudulan6@gmail.com">mrudulan6@gmail.com</a>
     </div>
    </div>
    <figure class="portrait">
      <div class="arch" aria-hidden="true"></div>
      <img src="assets/mrudula-cutout.webp" width="760" height="912" alt="Mrudula Nimmala, Senior Java Full Stack Developer">
-     <figcaption><i aria-hidden="true"></i>Available · Senior Java / Lead roles</figcaption>
+     <figcaption><i aria-hidden="true"></i>Available · Senior Java Full Stack</figcaption>
    </figure>
   </header>
   </div>
@@ -234,20 +271,26 @@ footer{padding-block:36px 48px;color:var(--muted);font-size:.85rem;display:flex;
       <a class="seg s-ch" href="#cardinal"><b>Cardinal Health</b><small>2024–now</small></a>
     </div>
     <div class="ticks" aria-hidden="true"><span>2015</span><span>2017</span><span>2019</span><span>2021</span><span>2023</span><span>2025</span><span>2026</span></div>
-    <div class="java" aria-label="Java versions used over time">
+    <div class="java" aria-label="Java versions over time">
       <div style="flex:49"><span>Java 8</span> · Boot 1.x</div>
       <div style="flex:34"><span>Java 11</span> · Boot 2.x</div>
       <div style="flex:22"><span>Java 11/17</span></div>
       <div style="flex:32"><span>Java 21</span> · Boot 3.x</div>
     </div>
+    <div class="cloud" aria-label="Platforms over time">
+      <div style="flex:18"><span>Tomcat</span></div>
+      <div style="flex:31"><span>Azure</span> App Service</div>
+      <div style="flex:56"><span>AWS</span> · EKS</div>
+      <div style="flex:32"><span>GCP</span> · GKE</div>
+    </div>
   </section>
 
   <div class="wrap">
-    <div class="facts">
-      <div><strong>11</strong><span>years building enterprise Java systems</span></div>
-      <div><strong>5</strong><span>clients across healthcare, retail, finance, HR</span></div>
-      <div><strong>8 → 21</strong><span>Java versions shipped to production</span></div>
-      <div><strong>~90%</strong><span>unit-test coverage reached on the Mastek storefront</span></div>
+    <div class="impact" aria-label="Selected results">
+      <div><span class="from d-health">Cardinal Health</span><strong><s>90 →</s>35 min</strong><span>average release time after migrating services from PCF to GKE</span></div>
+      <div><span class="from d-health">Cardinal Health</span><strong><s>350 →</s>120 ms</strong><span>p95 pricing lookups at peak, with ~40% fewer pricing database reads</span></div>
+      <div><span class="from d-finance">TransUnion</span><strong><s>1.8 s →</s>450 ms</strong><span>p95 on slow identity-verification queries through Oracle tuning</span></div>
+      <div><span class="from d-retail">Home Depot</span><strong>~70 min</strong><span>to restore a production P1 incident, then add a CI guard so it can't recur</span></div>
     </div>
   </div>
 
@@ -258,21 +301,22 @@ footer{padding-block:36px 48px;color:var(--muted);font-size:.85rem;display:flex;
       <aside>
         <div class="when">Mar 2024 – Present</div>
         <div class="where">Dublin, OH</div>
-        <span class="domain d-health">Healthcare · HIPAA</span>
+        <span class="domain d-health">Pharma supply chain</span>
       </aside>
       <div class="body">
         <h3>Cardinal Health</h3>
-        <div class="title">Senior Full Stack Developer · Tech lead, onboarding &amp; fulfilment microservices</div>
-        <p class="pd">AI-enabled pharmaceutical supply chain and distribution platform that moves product from manufacturers and distribution centres to hospitals and clinics. It covers customer onboarding, order capture, pricing validation, inventory allocation, warehouse fulfilment, shipment tracking, returns, recalls and exception reporting.</p>
+        <div class="title">Senior Full Stack Developer · Onboarding &amp; fulfilment microservices</div>
+        <p class="pd">Pharmaceutical supply chain and distribution platform that moves product from manufacturers and distribution centres to hospitals and clinics: customer onboarding, order capture, pricing validation, inventory allocation, warehouse fulfilment, shipment tracking, returns, recalls, DSCSA product serialization and exception reporting.</p>
+        <div class="flow"><b>Angular / React</b><i>→</i>Apigee + Okta SSO<i>→</i><b>Java 21 · Spring Boot 3.x</b><i>→</i>Cloud SQL · BigQuery · Memorystore · Elasticsearch<i>→</i><b>Kafka + Pub/Sub</b><i>→</i>GKE via Concourse<i>→</i>Cloud Monitoring</div>
         <ul>
-          <li>Built Java 21 and Spring Boot 3.x microservices with versioned REST APIs for onboarding, order validation and downstream processing, plus React and TypeScript dashboards (Hooks, Redux Toolkit, lazy-loaded routes) for order and inventory visibility.</li>
-          <li>Split data by access pattern as volume grew: MySQL for transactions, DynamoDB for high-volume audit records, S3 for archives, Redis cache-aside with TTL for hot pricing and inventory, and Elasticsearch for product search.</li>
-          <li>Published allocated-order events with Spring Kafka to drive warehouse, shipment and reporting workflows, using consumer groups and correlation IDs for traceable, reliable processing.</li>
-          <li>Built a Claude AI semantic order search with Spring AI and Elasticsearch so customers can find orders in plain language, with audit logging on every AI-assisted response.</li>
-          <li>Secured service calls with OAuth 2.0 and least-privilege AWS IAM policies; shipped through Docker, Amazon EKS, GitHub Actions and AWS CodePipeline behind SonarQube quality gates.</li>
-          <li>Mentor junior developers through design reviews and debugging sessions, and coordinate offshore teams with daily cross-time-zone standups and technical handoff specs.</li>
+          <li><strong>Migrated</strong> onboarding and fulfilment microservices from PCF (Tanzu) to GKE with Docker, Helm, Concourse pipelines, Cloud Build, Artifact Registry and Python deployment checks, cutting average release time from ~90 to ~35 minutes.</li>
+          <li><strong>Split data by access pattern:</strong> Cloud SQL for orders and pricing, BigQuery for audit and reporting, Cloud Storage for archives, Memorystore (Redis) cache-aside with TTL, and Elasticsearch for search. Pricing reads dropped ~40% and p95 lookups fell from ~350 ms to ~120 ms at peak.</li>
+          <li><strong>Published</strong> allocated-order and DSCSA serialization (EPCIS) events on Kafka with idempotent consumers keyed on a processed-event ID, so redelivered events never create duplicate fulfilment or traceability records.</li>
+          <li><strong>Secured</strong> APIs through Apigee with Okta SSO and OAuth 2.0 scopes enforced by Spring Security, least-privilege GCP IAM per service via Workload Identity, secrets in Secret Manager, and versioned Swagger/OpenAPI contracts shared with hospital, warehouse and reporting teams.</li>
+          <li><strong>Built</strong> Angular 17 operations screens, later upgraded to Angular 19, and React/TypeScript customer dashboards. Also built Claude AI semantic order search with Spring AI and Elasticsearch, and Spring Batch + Groovy jobs that sync inventory with warehouse management systems.</li>
+          <li><strong>Own</strong> services as a senior engineer: estimating story cards with product owners, serving on the on-call rotation, mentoring developers through code reviews, and enforcing JUnit, Mockito, Playwright, SonarQube and Veracode quality gates.</li>
         </ul>
-        <div class="chips"><span class="chip">Java 21</span><span class="chip">Spring Boot 3.x</span><span class="chip">Spring AI</span><span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">Kafka</span><span class="chip">MySQL</span><span class="chip">DynamoDB</span><span class="chip">Redis</span><span class="chip">Elasticsearch</span><span class="chip">Amazon EKS</span><span class="chip">GitHub Actions</span><span class="chip">CloudWatch</span><span class="chip">OAuth 2.0</span></div>
+        <div class="chips"><span class="chip">Java 21</span><span class="chip">Spring Boot 3.x</span><span class="chip">Spring Batch</span><span class="chip">Spring AI</span><span class="chip">Angular 17/19</span><span class="chip">React</span><span class="chip">Apigee</span><span class="chip">Okta</span><span class="chip">Kafka</span><span class="chip">Pub/Sub</span><span class="chip">Cloud SQL</span><span class="chip">BigQuery</span><span class="chip">Redis</span><span class="chip">Elasticsearch</span><span class="chip">GKE</span><span class="chip">Concourse</span><span class="chip">DSCSA / EPCIS</span></div>
       </div>
     </article>
 
@@ -280,21 +324,22 @@ footer{padding-block:36px 48px;color:var(--muted);font-size:.85rem;display:flex;
       <aside>
         <div class="when">May 2022 – Feb 2024</div>
         <div class="where">Atlanta, GA</div>
-        <span class="domain d-retail">Retail · B2B e-commerce</span>
+        <span class="domain d-retail">B2B retail · Payments</span>
       </aside>
       <div class="body">
         <h3>Home Depot</h3>
         <div class="title">Senior Full Stack Developer</div>
-        <p class="pd">B2B bulk order management and omnichannel fulfilment platform for contractors, builders and enterprise customers across web, mobile, store and assisted-sales channels: account validation, customer-specific pricing, bulk carts, inventory reservation, split fulfilment and refunds.</p>
+        <p class="pd">B2B bulk order management and omnichannel fulfilment platform for contractors, builders and enterprise customers across web, mobile, store and assisted sales: account validation, contract pricing, multi-line bulk carts, inventory reservation, split fulfilment, payments and refunds.</p>
+        <div class="flow"><b>React / TypeScript</b><i>→</i>API Gateway + Spring Security (OAuth 2.0, JWT, RBAC)<i>→</i><b>Java 11/17 · Spring Boot · REST + GraphQL</b><i>→</i>RDS PostgreSQL · Cassandra · Varnish · ElastiCache<i>→</i><b>Kafka</b><i>→</i>EKS via Jenkins + Harness<i>→</i>Prometheus</div>
         <ul>
-          <li>Delivered the bulk-order flow end to end, from React and TypeScript storefront screens through secured Spring Boot APIs to PostgreSQL, Redis, Kafka events and Camunda-orchestrated split fulfilment.</li>
-          <li>Prevented duplicate orders under concurrent load with PostgreSQL-backed idempotency keys and line-level reservation state persisted before any downstream call.</li>
-          <li>Kept large multi-line orders responsive at peak traffic with virtualized rendering, memoized selectors, pagination and debounced API calls.</li>
-          <li>Exposed REST and GraphQL through Amazon API Gateway, secured with Spring Security, OAuth 2.0, JWT and RBAC via a centralized security service.</li>
-          <li>Integrated downstream systems with Apache Camel routes and RabbitMQ, and ran high-volume Spring Batch jobs with restart and recovery.</li>
-          <li>Led recovery of a P1 incident caused by a cross-environment secrets reference, then added deployment checks that block configuration leakage.</li>
+          <li><strong>Built a PCI DSS Payment Service</strong> with tokenized cards and PO payments: authorize at checkout, capture per shipment for split orders, handle partial refunds, and use idempotency keys so retries never double-charge. Settlement is reconciled from S3 with Airflow.</li>
+          <li><strong>Prevented duplicate orders</strong> under concurrent bulk submissions by persisting idempotency keys, order headers and line-level reservation state in PostgreSQL before downstream processing. Duplicate-order tickets fell from a few a week to about one a month.</li>
+          <li><strong>Orchestrated</strong> pricing approval, PO/payment validation, multi-location fulfilment and exception recovery with Camunda BPMN, plus Apache Camel routes for transformation, enrichment and retries.</li>
+          <li><strong>Streamed</strong> order, pricing and inventory events from Kafka into BigQuery with Dataflow, and scheduled daily loads as Airflow DAGs on MWAA, giving merchandising teams near real-time reporting.</li>
+          <li><strong>Kept bulk orders responsive at peak</strong> with virtualized React rendering, Elasticsearch SKU autocomplete, memoized selectors, debounced calls and Varnish edge caching of catalog and pricing.</li>
+          <li><strong>Resolved a P1</strong> where a Helm values change pointed production at a QA Secrets Manager path. I traced it through pod config, rolled back, restored service in ~70 minutes, and added a CI check that validates secret paths per environment.</li>
         </ul>
-        <div class="chips"><span class="chip">Java 11/17</span><span class="chip">Spring Boot</span><span class="chip">React</span><span class="chip">Redux Toolkit</span><span class="chip">GraphQL</span><span class="chip">PostgreSQL</span><span class="chip">MongoDB</span><span class="chip">Kafka</span><span class="chip">RabbitMQ</span><span class="chip">Camunda BPMN</span><span class="chip">Apache Camel</span><span class="chip">Kubernetes</span><span class="chip">Terraform</span><span class="chip">Harness</span><span class="chip">Prometheus</span></div>
+        <div class="chips"><span class="chip">Java 11/17</span><span class="chip">Spring Boot</span><span class="chip">GraphQL</span><span class="chip">React</span><span class="chip">PostgreSQL</span><span class="chip">Cassandra</span><span class="chip">Kafka</span><span class="chip">RabbitMQ</span><span class="chip">PCI DSS</span><span class="chip">Camunda BPMN</span><span class="chip">Apache Camel</span><span class="chip">Airflow (MWAA)</span><span class="chip">Dataflow</span><span class="chip">EKS</span><span class="chip">Terraform</span><span class="chip">Harness CD</span></div>
       </div>
     </article>
 
@@ -302,20 +347,21 @@ footer{padding-block:36px 48px;color:var(--muted);font-size:.85rem;display:flex;
       <aside>
         <div class="when">Jul 2019 – Apr 2022</div>
         <div class="where">Chicago, IL</div>
-        <span class="domain d-finance">Financial services · Fraud &amp; KYC</span>
+        <span class="domain d-finance">Identity &amp; fraud</span>
       </aside>
       <div class="body">
         <h3>TransUnion</h3>
         <div class="title">Java Full Stack Developer</div>
         <p class="pd">Customer identity verification and fraud-risk platform for new-account opening, loan processing, new-device access, document verification, OTP authentication and high-risk transaction review, integrating TruValidate and iovation.</p>
+        <div class="flow"><b>Angular / TypeScript</b><i>→</i>API Gateway + Spring Security<i>→</i><b>Java 11 · Spring Boot 2.1 · REST + gRPC</b><i>→</i>TruValidate · iovation · Oracle<i>→</i><b>Kafka + SNS</b><i>→</i>EKS via CodePipeline<i>→</i>Splunk · Grafana</div>
         <ul>
-          <li>Delivered the identity-verification and fraud-risk flow from Angular and TypeScript channels through Amazon API Gateway and Java 11 Spring Boot services, with Oracle persistence via Spring Data JPA and Hibernate.</li>
-          <li>Decoupled OTP, fraud-alert and verification-status processing with Kafka: consumer groups, retries, idempotent consumers and dead-letter topics.</li>
-          <li>Used gRPC with Protocol Buffer contracts for low-latency internal calls and REST for external integrations.</li>
-          <li>Enforced least-privilege access with Spring Security, OAuth 2.0 and AWS IAM; kept secrets in HashiCorp Vault and config in Spring Cloud Config.</li>
-          <li>Cut diagnosis time by centralizing service, Kafka and integration logs in Splunk and tracing requests with correlation IDs.</li>
+          <li><strong>Cut p95</strong> on slow verification queries from ~1.8 s to ~450 ms through Oracle indexing and execution-plan tuning behind Spring Data JPA and Hibernate.</li>
+          <li><strong>Decoupled</strong> verification, OTP and fraud-risk processing with Kafka consumer groups, correlation IDs, retries, idempotent processing and dead-letter topics, so a failed event is isolated and safely replayed instead of stalling the pipeline.</li>
+          <li><strong>Chose gRPC</strong> with Protocol Buffers for low-latency internal calls, and kept REST with Swagger/OpenAPI contracts for TruValidate, iovation and banking integrations.</li>
+          <li><strong>Reduced MTTR</strong> for verification incidents from ~2 hours to ~50 minutes with Splunk logs, Prometheus and Grafana metrics, Cucumber BDD suites and EKS deployments through CodePipeline.</li>
+          <li><strong>Moved secrets out of code</strong> into HashiCorp Vault and centralized config in Spring Cloud Config. Delivered in SAFe PI increments with product and fraud architecture teams.</li>
         </ul>
-        <div class="chips"><span class="chip">Java 11</span><span class="chip">Spring Boot 2.x</span><span class="chip">Angular</span><span class="chip">Oracle</span><span class="chip">Kafka</span><span class="chip">gRPC</span><span class="chip">Amazon SNS</span><span class="chip">HashiCorp Vault</span><span class="chip">Amazon EKS</span><span class="chip">Splunk</span></div>
+        <div class="chips"><span class="chip">Java 11</span><span class="chip">Spring Boot 2.1</span><span class="chip">gRPC</span><span class="chip">Angular</span><span class="chip">Oracle</span><span class="chip">Kafka</span><span class="chip">Amazon SNS</span><span class="chip">HashiCorp Vault</span><span class="chip">EKS</span><span class="chip">CodePipeline</span><span class="chip">Splunk</span><span class="chip">Grafana</span><span class="chip">Cucumber</span></div>
       </div>
     </article>
 
@@ -323,19 +369,20 @@ footer{padding-block:36px 48px;color:var(--muted);font-size:.85rem;display:flex;
       <aside>
         <div class="when">Dec 2016 – Jun 2019</div>
         <div class="where">Roseland, NJ</div>
-        <span class="domain d-hr">HR &amp; Payroll</span>
+        <span class="domain d-hr">HR &amp; payroll</span>
       </aside>
       <div class="body">
         <h3>ADP</h3>
         <div class="title">Java Full Stack Developer</div>
-        <p class="pd">Cloud-based HR, payroll and employee self-service platform covering employee profiles, payroll processing, direct deposit, tax deductions, benefits enrolment, time and attendance, PTO and manager approvals.</p>
+        <p class="pd">HR, payroll and employee self-service platform covering employee profiles, payroll processing, direct deposit, tax deductions, benefits enrolment, time and attendance, PTO and manager approvals.</p>
+        <div class="flow"><b>React 15/16 + Redux</b><i>→</i><b>Java 8 · Spring Boot 1.4</b><i>→</i>Oracle · Redis<i>→</i>ActiveMQ + Spring Batch<i>→</i>Azure App Service via Jenkins</div>
         <ul>
-          <li>Built Java 8 and Spring Boot services with Spring MVC, REST and Hibernate for profiles, payroll calculations, benefits and approvals.</li>
-          <li>Built React and Redux self-service modules for payroll dashboards, benefits enrolment and approval workflows.</li>
-          <li>Reduced repeated database calls with Redis caching of reference data, and automated payroll updates and reconciliation with ActiveMQ and Spring Batch.</li>
-          <li>Containerized services with Docker on GKE, with Jenkins pipelines and SonarQube gates.</li>
+          <li><strong>Built payroll services</strong> for gross-to-net pay, federal and state tax withholding and benefit deductions, generating NACHA ACH files with Spring Batch for direct deposit.</li>
+          <li><strong>Cut the nightly payroll batch</strong> from ~5 to ~3.5 hours by automating reconciliation with ActiveMQ, Spring Batch and Azure Blob Storage staging.</li>
+          <li><strong>Reduced repeated database calls ~30%</strong> and page load from ~2 s to ~1.1 s by tuning Oracle PL/SQL and caching reference data in Redis.</li>
+          <li><strong>Protected payroll PII</strong> by masking SSNs and bank accounts in React self-service modules and encrypting them at rest, behind role-based Spring Security APIs.</li>
         </ul>
-        <div class="chips"><span class="chip">Java 8</span><span class="chip">Spring Boot</span><span class="chip">React</span><span class="chip">Redux</span><span class="chip">MySQL</span><span class="chip">Redis</span><span class="chip">ActiveMQ</span><span class="chip">Spring Batch</span><span class="chip">GKE</span><span class="chip">Jenkins</span></div>
+        <div class="chips"><span class="chip">Java 8</span><span class="chip">Spring Boot 1.4</span><span class="chip">React 15/16</span><span class="chip">Redux</span><span class="chip">Oracle</span><span class="chip">PL/SQL</span><span class="chip">Redis</span><span class="chip">ActiveMQ</span><span class="chip">Spring Batch</span><span class="chip">NACHA / ACH</span><span class="chip">Azure</span></div>
       </div>
     </article>
 
@@ -343,92 +390,123 @@ footer{padding-block:36px 48px;color:var(--muted);font-size:.85rem;display:flex;
       <aside>
         <div class="when">May 2015 – Oct 2016</div>
         <div class="where">Mumbai, India</div>
-        <span class="domain d-consult">Consulting · Retail mobile</span>
+        <span class="domain d-consult">Retail e-commerce</span>
       </aside>
       <div class="body">
-        <h3>Mastek <span style="font-weight:500;color:var(--muted);font-size:1rem">for TotalEnergies</span></h3>
+        <h3>Mastek <span style="font-family:var(--body);font-size:1rem;color:var(--muted)">for Total (now TotalEnergies)</span></h3>
         <div class="title">Java Developer</div>
         <p class="pd">Retail mobile storefront supporting product search, cart, checkout, order placement, customer profiles, order tracking and loyalty rewards.</p>
+        <div class="flow"><b>AngularJS</b><i>→</i><b>Java 8 · Spring Boot on Tomcat</b><i>→</i>Hibernate/JPA · MySQL<i>→</i>Apache Camel + SOAP/XML legacy integrations</div>
         <ul>
-          <li>Built Java 8 and Spring Boot services with Hibernate/JPA and REST, plus reusable Angular storefront components.</li>
-          <li>Implemented loyalty-rewards workflows: enrolment, points calculation, redemption validation and checkout benefits.</li>
-          <li>Connected the storefront to enterprise systems with Apache Camel routes and SOAP/XML integrations.</li>
-          <li>Raised unit-test coverage to about 90% across catalog, cart, checkout and order tracking.</li>
+          <li><strong>Implemented loyalty-rewards workflows</strong> for enrolment, points calculation, redemption validation and order-level benefits, validated against legacy loyalty data before go-live.</li>
+          <li><strong>Raised automated test coverage</strong> from ~55% to ~80% across catalog, cart, checkout and order tracking by expanding JUnit suites and resolving SonarQube violations.</li>
+          <li><strong>Integrated legacy systems</strong> through Apache Camel routes and SOAP/XML services with validation, transformation and exception handling, tracking errors in Splunk.</li>
         </ul>
-        <div class="chips"><span class="chip">Java 8</span><span class="chip">Spring Boot</span><span class="chip">Angular</span><span class="chip">Hibernate</span><span class="chip">Apache Camel</span><span class="chip">SOAP</span><span class="chip">Azure</span><span class="chip">JUnit</span></div>
+        <div class="chips"><span class="chip">Java 8</span><span class="chip">Spring Boot</span><span class="chip">AngularJS</span><span class="chip">MySQL</span><span class="chip">Tomcat</span><span class="chip">Apache Camel</span><span class="chip">SOAP</span><span class="chip">Jenkins</span></div>
       </div>
     </article>
   </section>
 
   <section class="block wrap" id="work" aria-labelledby="work-h">
-    <div class="sec-title"><h2 id="work-h">Case studies</h2><span class="label">Problems I owned</span></div>
+    <div class="sec-title"><h2 id="work-h">Case studies</h2><span class="label">Decisions, trade-offs, results</span></div>
     <div class="cases">
       <article class="case">
-        <div class="from d-retail">Home Depot · Concurrency</div>
-        <h3>No duplicate bulk orders, even on retry</h3>
+        <div class="top"><span class="from d-health">Cardinal Health · Platform</span><span class="metric">90 → 35 min releases</span></div>
+        <h3>Moving supply chain services from PCF to GKE</h3>
         <dl>
-          <dt>Problem</dt><dd>Contractors submit large multi-line orders from several channels. Network retries and double-clicks could create the same order twice and over-reserve stock.</dd>
-          <dt>Approach</dt><dd>Idempotency keys enforced in PostgreSQL, with the order header and line-level reservation state written before any downstream call. Camunda then orchestrated split fulfilment.</dd>
-          <dt>Result</dt><dd>Retries became safe, and reservations stayed consistent across concurrent bulk orders.</dd>
+          <dt>Problem</dt><dd>Onboarding and fulfilment services on PCF (Tanzu) had slow, manual-heavy releases and platform-bound configuration.</dd>
+          <dt>Approach</dt><dd>Service-by-service cutover: buildpacks became Dockerfiles, manifests became Helm values, and service bindings moved to Secret Manager with Workload Identity. Concourse runs build, test, scan and deploy, with Cloud Build images in Artifact Registry and Python deployment checks.</dd>
+          <dt>Result</dt><dd>Average release time fell from ~90 to ~35 minutes, with health and latency visible in Cloud Monitoring.</dd>
         </dl>
       </article>
       <article class="case">
-        <div class="from d-health">Cardinal Health · AI</div>
-        <h3>Semantic order search with Claude</h3>
-        <dl>
-          <dt>Problem</dt><dd>Customers lost time finding orders with exact-match search fields.</dd>
-          <dt>Approach</dt><dd>Order and product data embedded in Elasticsearch, with Claude via Spring AI interpreting natural-language queries and ranking results.</dd>
-          <dt>Result</dt><dd>Faster order lookup, with every AI-assisted answer audit-logged for a HIPAA-regulated environment.</dd>
-        </dl>
-      </article>
-      <article class="case">
-        <div class="from d-health">Cardinal Health · Data architecture</div>
+        <div class="top"><span class="from d-health">Cardinal Health · Data</span><span class="metric">p95 350 → 120 ms</span></div>
         <h3>One store per access pattern</h3>
         <dl>
-          <dt>Problem</dt><dd>A single database couldn't serve transactions, high-volume audit logs, archives and fast lookups efficiently as volume grew.</dd>
-          <dt>Approach</dt><dd>MySQL for transactions, DynamoDB for audit records, S3 for archives, Redis cache-aside with TTL for pricing and inventory, Elasticsearch for search.</dd>
-          <dt>Result</dt><dd>Lower database load on the hot paths, with each workload on storage built for it.</dd>
+          <dt>Problem</dt><dd>One transactional database was serving orders, audit history, archives, search and hot pricing reads at peak.</dd>
+          <dt>Approach</dt><dd>Cloud SQL for orders and pricing, BigQuery for audit and reporting, Cloud Storage for archives, Elasticsearch for search, and Memorystore cache-aside with TTL for pricing. Final order validation always reads Cloud SQL, so a stale cache can never price an order.</dd>
+          <dt>Result</dt><dd>~40% fewer pricing reads, and p95 pricing lookups fell from ~350 ms to ~120 ms at peak.</dd>
         </dl>
       </article>
       <article class="case">
-        <div class="from d-finance">TransUnion · Event-driven</div>
-        <h3>Fraud and OTP events that never get lost</h3>
+        <div class="top"><span class="from d-retail">Home Depot · Payments</span><span class="metric">PCI DSS</span></div>
+        <h3>Capture per shipment, never charge twice</h3>
         <dl>
-          <dt>Problem</dt><dd>Identity checks, OTP delivery and fraud alerts were tightly coupled, so one slow dependency held up the rest.</dd>
-          <dt>Approach</dt><dd>Kafka topics per event type, idempotent consumers, retries and dead-letter topics, with Amazon SNS for time-sensitive customer notifications.</dd>
-          <dt>Result</dt><dd>Verification stayed responsive, and failed messages were isolated for reprocessing instead of blocking the flow.</dd>
+          <dt>Problem</dt><dd>Split B2B orders ship from several locations, but customers should be charged only for what actually ships, and retries must never double-charge.</dd>
+          <dt>Approach</dt><dd>A Spring Boot Payment Service on a third-party gateway with tokenized cards: authorize at checkout, capture per shipment, refund partially, guard every call with an idempotency key, publish status on RabbitMQ, and reconcile settlement from S3 with Airflow.</dd>
+          <dt>Result</dt><dd>Correct charges on split shipments, safe retries, and a daily reconciliation trail for finance.</dd>
+        </dl>
+      </article>
+      <article class="case">
+        <div class="top"><span class="from d-retail">Home Depot · Concurrency</span><span class="metric">weekly → ~monthly</span></div>
+        <h3>No duplicate bulk orders under retry</h3>
+        <dl>
+          <dt>Problem</dt><dd>Concurrent bulk submissions, network retries and double clicks were creating duplicate orders and over-reserving stock.</dd>
+          <dt>Approach</dt><dd>Persist the idempotency key, order header and line-level reservation state in PostgreSQL before any downstream call. Camunda then orchestrates split fulfilment and exception recovery.</dd>
+          <dt>Result</dt><dd>Duplicate-order tickets dropped from a few per week to about one a month.</dd>
+        </dl>
+      </article>
+      <article class="case">
+        <div class="top"><span class="from d-health">Cardinal Health · Events</span><span class="metric">DSCSA / EPCIS</span></div>
+        <h3>Traceability events that are safe to redeliver</h3>
+        <dl>
+          <dt>Problem</dt><dd>Allocated-order and serialization events feed warehouse, shipment and traceability workflows. Kafka guarantees at-least-once delivery, and consumer groups alone don't remove duplicates.</dd>
+          <dt>Approach</dt><dd>Idempotent Spring Kafka consumers keyed on a processed-event ID, with Kafka for high-volume ordered streams and Google Pub/Sub for GCP-native fan-out.</dd>
+          <dt>Result</dt><dd>Redelivered events never create duplicate fulfilment or traceability records.</dd>
+        </dl>
+      </article>
+      <article class="case">
+        <div class="top"><span class="from d-finance">TransUnion · Performance</span><span class="metric">1.8 s → 450 ms</span></div>
+        <h3>Fixing the slowest verification queries</h3>
+        <dl>
+          <dt>Problem</dt><dd>Identity-verification lookups on Oracle were slowing account opening and loan checks for banking clients.</dd>
+          <dt>Approach</dt><dd>Read execution plans, added targeted indexes and reshaped queries behind Spring Data JPA and Hibernate, without weakening transactional consistency or the audit trail.</dd>
+          <dt>Result</dt><dd>p95 on the slow queries fell from ~1.8 s to ~450 ms.</dd>
         </dl>
       </article>
       <article class="case wide">
-        <div class="from d-retail">Home Depot · Production incident</div>
-        <h3>P1: production pointing at a lower-environment secret</h3>
+        <div class="top"><span class="from d-retail">Home Depot · Production incident</span><span class="metric">restored in ~70 min</span></div>
+        <h3>P1: production reading a QA secret</h3>
         <dl>
-          <dt>Problem</dt><dd>A Kubernetes deployment referenced a lower-environment AWS Secrets Manager path, so customer-data endpoints resolved incorrectly in production.</dd>
-          <dt>Approach</dt><dd>Traced it through pod configuration and environment-specific properties, corrected the deployment config and secret reference, validated connectivity and coordinated recovery.</dd>
-          <dt>Result</dt><dd>Service restored, and new deployment checks now stop cross-environment configuration from reaching production.</dd>
+          <dt>Problem</dt><dd>A Helm values change made a production Kubernetes deployment read a QA AWS Secrets Manager path, and customer order-history calls began failing.</dd>
+          <dt>Approach</dt><dd>Traced the failure through pod configuration to the bad secret path, rolled back, and verified connectivity with the downstream teams.</dd>
+          <dt>Result</dt><dd>Service restored in ~70 minutes. A new CI check now validates secret paths per environment before every production deployment.</dd>
         </dl>
       </article>
     </div>
   </section>
 
+  <section class="block wrap" id="domains" aria-labelledby="dom-h">
+    <div class="sec-title"><h2 id="dom-h">Domain depth</h2><span class="label">Four regulated, high-volume businesses</span></div>
+    <div class="domains">
+      <div class="dom d-health"><h3>Pharma supply chain</h3><p>Order-to-shipment flows for hospitals and clinics, with serialized product traceability and warehouse integration.</p><div class="tags">DSCSA · EPCIS · WMS · recalls</div></div>
+      <div class="dom d-retail"><h3>B2B retail &amp; payments</h3><p>Contract pricing, bulk carts and split fulfilment, with card and PO payments captured per shipment.</p><div class="tags">PCI DSS · tokenization · idempotency</div></div>
+      <div class="dom d-finance"><h3>Identity &amp; fraud</h3><p>Account opening, device risk, OTP and document checks for banking clients.</p><div class="tags">TruValidate · iovation · OTP</div></div>
+      <div class="dom d-hr"><h3>HR &amp; payroll</h3><p>Gross-to-net pay, tax withholding, benefits and direct deposit, with payroll PII protected end to end.</p><div class="tags">NACHA / ACH · PII masking</div></div>
+    </div>
+  </section>
+
   <section class="block wrap" id="stack" aria-labelledby="stack-h">
-    <div class="sec-title"><h2 id="stack-h">Stack</h2><span class="label">Used on client projects</span></div>
+    <div class="sec-title"><h2 id="stack-h">Stack</h2><span class="label">Used in production on client projects</span></div>
     <div class="skills">
-      <div><h3>Backend</h3><p>Java 8 / 11 / 17 / 21, Spring Boot 1.x–3.x, Spring MVC, Spring Security, Spring Data JPA, Spring Batch, Spring AI, Hibernate, Apache Camel, gRPC</p></div>
-      <div><h3>Frontend</h3><p>React, Redux Toolkit, React Router, TypeScript, Angular, Angular Material, RxJS, HTML, CSS</p></div>
-      <div><h3>APIs &amp; messaging</h3><p>REST, GraphQL, SOAP, OpenAPI, Apache Kafka, RabbitMQ, ActiveMQ, Amazon SNS, Camunda BPMN</p></div>
-      <div><h3>Data</h3><p>PostgreSQL, MySQL, Oracle, MongoDB, DynamoDB, Redis, Elasticsearch, Amazon S3</p></div>
-      <div><h3>Cloud &amp; DevOps</h3><p>AWS (EKS, IAM, API Gateway, CloudWatch, Secrets Manager), GCP (GKE), Azure, Docker, Kubernetes, Helm, Terraform, Jenkins, GitHub Actions, Harness</p></div>
-      <div><h3>Security &amp; quality</h3><p>OAuth 2.0, JWT, RBAC, HashiCorp Vault, JUnit, Mockito, Postman/Newman, SonarQube, Splunk, Prometheus</p></div>
+      <div><h3>Backend</h3><p>Java 8 / 11 / 17 / 21, Spring Boot 1.x–3.x, Spring MVC, Spring Security, Spring Data JPA, Spring Batch, Spring Kafka, Spring Cloud Config, Spring AI, Hibernate, Groovy, Python</p></div>
+      <div><h3>Frontend</h3><p>Angular 17/19, AngularJS, RxJS, React, Redux Toolkit, TypeScript, lazy loading, virtualized rendering, responsive design</p></div>
+      <div><h3>APIs &amp; integration</h3><p>REST, GraphQL, gRPC / Protocol Buffers, SOAP/XML, OpenAPI, Apigee, Amazon API Gateway, Camunda BPMN, Apache Camel</p></div>
+      <div><h3>Messaging &amp; data pipelines</h3><p>Apache Kafka, Google Pub/Sub, RabbitMQ, ActiveMQ, Amazon SNS, Apache Airflow, Google Dataflow</p></div>
+      <div><h3>Data</h3><p>Oracle, PostgreSQL, MySQL, Cassandra, BigQuery, Redis, Varnish, Elasticsearch, SQL &amp; PL/SQL tuning</p></div>
+      <div><h3>Cloud &amp; delivery</h3><p>GCP (GKE, Cloud SQL, Pub/Sub, BigQuery), AWS (EKS, RDS, S3, MWAA), Azure, Docker, Kubernetes, Helm, Terraform, PCF, Concourse, Jenkins, Harness CD</p></div>
+      <div><h3>Security</h3><p>OAuth 2.0, JWT, RBAC, Okta SSO, GCP &amp; AWS IAM, HashiCorp Vault, Veracode, PCI DSS, PII masking</p></div>
+      <div><h3>Quality &amp; observability</h3><p>JUnit 5, Mockito, Cucumber, Playwright, REST Assured, SonarQube, Splunk, Prometheus, Grafana, Cloud Monitoring</p></div>
+      <div><h3>AI &amp; ways of working</h3><p>Claude AI, Spring AI, GitHub Copilot, Agile / SAFe, on-call and RCA, code reviews, mentoring</p></div>
     </div>
   </section>
 
   <section class="block wrap" aria-labelledby="how-h">
     <div class="sec-title"><h2 id="how-h">How I work</h2></div>
     <div class="principles">
-      <div><h3>Design for the failure case</h3><p>Idempotency, retries, dead-letter topics and clear rollback paths go in from the start, not after the first incident.</p></div>
-      <div><h3>Own it through production</h3><p>I ship with health checks, structured logs and correlation IDs, so when something breaks I can find it quickly.</p></div>
-      <div><h3>Raise the team</h3><p>Design reviews, code reviews, pairing on defects and clear handoff specs for offshore teams keep delivery predictable.</p></div>
+      <div><h3>Design for the failure case</h3><p>Idempotency keys, retries, dead-letter topics and rollback paths go in on day one, not after the first incident.</p></div>
+      <div><h3>Own it in production</h3><p>I'm on the on-call rotation for what I build. Correlation IDs, health checks and dashboards ship with the code, so problems are found in minutes.</p></div>
+      <div><h3>Make the team faster</h3><p>Story-card estimates with product owners, code reviews that teach, and pipeline guards that stop the same mistake twice.</p></div>
     </div>
   </section>
 
@@ -436,7 +514,7 @@ footer{padding-block:36px 48px;color:var(--muted);font-size:.85rem;display:flex;
     <section class="contact" id="contact" aria-labelledby="contact-h">
       <div>
         <h2 id="contact-h">Let's talk about your next platform.</h2>
-        <p>Open to Senior Java Full Stack, Backend Java, Java Lead and Java + AWS roles across the USA.</p>
+        <p>Open to Senior Java Full Stack, Senior Backend Java and Java Cloud (GCP / AWS) roles across the USA.</p>
       </div>
       <div class="lines">
         <div><span>Email</span><a href="mailto:mrudulan6@gmail.com">mrudulan6@gmail.com</a></div>
