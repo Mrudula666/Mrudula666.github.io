@@ -4,528 +4,563 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Mrudula Nimmala — Senior Java Full Stack Developer</title>
-<meta name="description" content="Senior Java Full Stack Developer with 11 years building pharma supply chain, B2B order and payment, identity-verification and payroll platforms. Java 21, Spring Boot 3, Angular, React, Kafka, GCP and AWS.">
+<meta name="description" content="Senior Java Full Stack Developer with 11 years building pharma supply chain, B2B order and payment, identity-verification and payroll platforms. Java 21, Spring Boot 3, Spring AI, Angular, React, Kafka, GCP and AWS.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Mrudula Nimmala — Senior Java Full Stack Developer">
-<meta property="og:description" content="11 years of enterprise Java across Cardinal Health, Home Depot, TransUnion, ADP and Mastek. Java 21 · Spring Boot 3 · Angular · React · Kafka · GCP · AWS.">
+<meta property="og:description" content="11 years of enterprise Java across Cardinal Health, Home Depot, TransUnion, ADP and Mastek. Java 21 · Spring Boot 3 · Spring AI · Angular · React · Kafka · GCP · AWS.">
 <meta property="og:url" content="https://mrudula666.github.io/">
 <meta property="og:image" content="https://mrudula666.github.io/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230D2925'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='15' font-weight='700' text-anchor='middle' fill='%23E8AC52'%3EMN%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%231A1A1A'/%3E%3Ctext x='16' y='22.5' font-family='Georgia,serif' font-style='italic' font-size='17' text-anchor='middle' fill='%23FBF9EF'%3Em%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
 <style>
-/* Layout: evergreen hero band with portrait in a lit arch; career rail drawn to scale with Java and cloud strips; impact strip; experience ledger with request paths; case studies; domains; stack. */
+/* Layout: warm ivory page; serif headlines with italic turns; soft tinted cards; client marquee; before/after bars drawn to scale; tabbed client experience; case cards; dark trust band; FAQ; closing CTA. */
 :root{
-  --bg:#F1F5F3; --surface:#FFFFFF; --fg:#10201D; --muted:#53655F; --line:#D3DFDA;
-  --ink:#0F5247; --signal:#B9781F; --signal-soft:#F3E3C6;
-  --band:#0D2925; --band-fg:#EAF2EF; --band-muted:#A9C2BB; --arch:#1E4A42; --arch-glow:#3F7A6C;
-  --on-seg:#FFFFFF; --health:#2E7D6B; --retail:#C2571E; --finance:#3B5BA9; --hr:#7A4E9E; --consult:#5D6B7A;
-  --display:"DM Serif Display", Georgia, "Times New Roman", serif;
-  --body:"Manrope", "Segoe UI", system-ui, sans-serif;
+  --bg:#FBF9EF; --paper:#FFFFFF; --ink:#1A1A1A; --muted:#5F5B50; --line:#E5E0CE;
+  --coral:#E85A3A; --coral-ink:#B5401F;
+  --lav:#EEE3FC; --sage:#E2EBD8; --sky:#DCE7F4; --butter:#F6EBC2; --peach:#FBE0D3;
+  --btn:#EADBFF; --pill:#ECE8D6; --band:#1A1A1A; --band-fg:#FBF9EF; --band-muted:#B9B4A3;
+  --serif:"EB Garamond", Garamond, "Times New Roman", serif;
+  --sans:"Figtree", "Segoe UI", system-ui, -apple-system, sans-serif;
   --mono:"JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
   color-scheme:light;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    --bg:#08130F; --surface:#0F1E1A; --fg:#E4EEEA; --muted:#93AAA3; --line:#1F332E;
-    --ink:#7FD0BC; --signal:#E8AC52; --signal-soft:#3A2D16;
-    --band:#0B201C; --band-fg:#EAF2EF; --band-muted:#A9C2BB; --arch:#1A423B; --arch-glow:#3A7366;
-    --on-seg:#08130F; --health:#5CC3A8; --retail:#F08A52; --finance:#86A4F0; --hr:#BB93DE; --consult:#9AA8B6;
+    --bg:#131311; --paper:#1C1B18; --ink:#F2EFE3; --muted:#A9A496; --line:#2F2D27;
+    --coral:#FF7A5C; --coral-ink:#FF9277;
+    --lav:#2B2438; --sage:#1F2A1E; --sky:#1A2532; --butter:#2D2814; --peach:#33211A;
+    --btn:#3B2D55; --pill:#2A2822; --band:#0B0B0A; --band-fg:#F2EFE3; --band-muted:#9C978A;
     color-scheme:dark;
   }
 }
 :root[data-theme="dark"]{
-  --bg:#08130F; --surface:#0F1E1A; --fg:#E4EEEA; --muted:#93AAA3; --line:#1F332E;
-  --ink:#7FD0BC; --signal:#E8AC52; --signal-soft:#3A2D16;
-  --band:#0B201C; --band-fg:#EAF2EF; --band-muted:#A9C2BB; --arch:#1A423B; --arch-glow:#3A7366;
-  --on-seg:#08130F; --health:#5CC3A8; --retail:#F08A52; --finance:#86A4F0; --hr:#BB93DE; --consult:#9AA8B6;
+  --bg:#131311; --paper:#1C1B18; --ink:#F2EFE3; --muted:#A9A496; --line:#2F2D27;
+  --coral:#FF7A5C; --coral-ink:#FF9277;
+  --lav:#2B2438; --sage:#1F2A1E; --sky:#1A2532; --butter:#2D2814; --peach:#33211A;
+  --btn:#3B2D55; --pill:#2A2822; --band:#0B0B0A; --band-fg:#F2EFE3; --band-muted:#9C978A;
   color-scheme:dark;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto} *{animation:none!important;transition:none!important}}
-body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 var(--body);-webkit-font-smoothing:antialiased}
-a{color:var(--ink);text-underline-offset:3px}
-a:focus-visible,button:focus-visible{outline:2px solid var(--signal);outline-offset:3px;border-radius:4px}
-.wrap{max-width:1080px;margin:0 auto;padding-left:max(20px, env(safe-area-inset-left, 0px));padding-right:max(20px, env(safe-area-inset-right, 0px))}
-h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.1}
-.label{font:600 .72rem/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.6 var(--sans);-webkit-font-smoothing:antialiased;padding-top:env(safe-area-inset-top,0px)}
+img{max-width:100%}
+[hidden]{display:none!important}
+a{color:inherit}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--coral);outline-offset:3px;border-radius:8px}
+.wrap{max-width:1200px;margin:0 auto;padding-left:max(20px, env(safe-area-inset-left,0px));padding-right:max(20px, env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0;text-wrap:balance;letter-spacing:-.015em}
+h1 em,h2 em{font-style:italic;color:var(--coral-ink)}
+p{margin:0}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font:600 .78rem/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--coral)}
+.sec{padding-block:clamp(72px,10vw,128px) 0}
+.sec-head{display:grid;gap:18px;max-width:820px;margin-bottom:clamp(36px,5vw,56px)}
+.sec-head h2{font-size:clamp(2.6rem,6vw,4.6rem);line-height:1.02}
+.sec-head p{font-size:1.15rem;color:var(--muted);max-width:60ch}
+.center{text-align:center;margin-inline:auto;justify-items:center}
 
-/* nav */
-.nav{position:sticky;top:env(safe-area-inset-top, 0px);z-index:10;background:color-mix(in srgb, var(--bg) 88%, transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
-.mark{font:700 .95rem var(--mono);color:var(--fg);text-decoration:none}
-.mark span{color:var(--signal)}
-.nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-size:.9rem}
-.nav ul a{color:var(--muted);text-decoration:none}
-.nav ul a:hover{color:var(--fg)}
-@media (max-width:640px){.nav ul{display:none}}
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;font:600 1rem/1 var(--sans);text-decoration:none;padding:15px 22px;border-radius:10px;border:1.5px solid var(--ink);background:var(--btn);color:var(--ink);cursor:pointer;transition:transform .15s, box-shadow .15s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 3px 0 var(--ink)}
+.btn.pill{border-radius:999px;border-color:transparent;background:var(--pill)}
+.btn.pill:hover{box-shadow:none}
+
+/* announcement + nav */
+.announce{background:var(--band);color:var(--band-fg);font:500 .88rem/1.4 var(--sans);text-align:center}
+.announce .wrap{padding-block:10px}
+.announce b{color:var(--coral)}
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb, var(--bg) 86%, transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.mark{font:500 1.5rem/1 var(--serif);text-decoration:none}
+.mark i{color:var(--coral-ink)}
+.nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0;font-size:.95rem;font-weight:500}
+.nav ul a{text-decoration:none;color:var(--muted)}
+.nav ul a:hover{color:var(--ink)}
+.nav .btn{padding:11px 18px;font-size:.92rem}
+@media (max-width:900px){.nav ul{display:none}}
 
 /* hero */
-.hero-band{background:var(--band);color:var(--band-fg);overflow:hidden;position:relative}
-.hero-band::after{content:"";position:absolute;inset:auto 0 0 0;height:1px;background:linear-gradient(90deg,transparent,var(--signal),transparent);opacity:.6}
-.hero{padding-block:56px 0;display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:48px;align-items:end}
-.hero-text{min-width:0;padding-bottom:64px}
-.hero .label{color:var(--band-muted)}
-.hero h1{color:var(--band-fg)}
-.hero h1 em{color:var(--signal)}
-.hero .role{color:var(--band-muted)}
-.hero .btn{background:transparent;color:var(--band-fg);border-color:color-mix(in srgb, var(--band-fg) 28%, transparent)}
-.hero .btn.primary{background:var(--signal);border-color:var(--signal);color:#10201D}
-.portrait{margin:0;position:relative;align-self:end;max-width:100%}
-.portrait .arch{position:absolute;left:0;right:0;bottom:0;top:56px;border-radius:190px 190px 0 0;background:radial-gradient(120% 70% at 50% 18%, var(--arch-glow), var(--arch) 62%);box-shadow:inset 0 0 0 1px color-mix(in srgb, var(--signal) 45%, transparent)}
-.portrait img{position:relative;display:block;width:100%;height:auto;filter:drop-shadow(0 18px 30px rgba(0,0,0,.35))}
-.portrait figcaption{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);white-space:nowrap;background:var(--band);color:var(--band-fg);border:1px solid color-mix(in srgb, var(--signal) 55%, transparent);border-radius:999px;padding:8px 14px;font:600 .72rem var(--mono);letter-spacing:.04em}
-.portrait figcaption i{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--health);margin-right:8px;vertical-align:1px}
-@media (max-width:860px){
-  .hero{grid-template-columns:1fr;gap:8px;padding-block:28px 0}
-  .portrait{order:-1;width:min(260px,72%);margin-inline:auto}
-  .portrait figcaption{display:none}
-  .hero-text{padding-bottom:44px}
+.hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(32px,5vw,72px);align-items:center;padding-block:clamp(40px,7vw,88px) 0}
+.hero h1{font-size:clamp(3.2rem,8.4vw,7rem);line-height:.95;margin-top:22px}
+.hero .lede{font-size:clamp(1.1rem,1.6vw,1.3rem);color:var(--muted);margin-top:26px;max-width:46ch}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.hero .stackline{margin-top:28px;font:500 .8rem/1.6 var(--mono);color:var(--muted);letter-spacing:.02em}
+.stage{position:relative;border-radius:28px;background:radial-gradient(120% 90% at 20% 10%, var(--peach), transparent 60%),radial-gradient(110% 90% at 90% 90%, var(--lav), transparent 60%),var(--butter);aspect-ratio:4/4.6;max-width:100%;overflow:hidden;isolation:isolate}
+.stage img{position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:88%;height:auto;filter:drop-shadow(0 20px 30px rgba(40,30,10,.18))}
+.float{position:absolute;z-index:2;background:var(--paper);color:var(--ink);border-radius:14px;padding:12px 14px;box-shadow:0 10px 30px rgba(30,20,0,.12);border:1px solid var(--line);font-size:.82rem;line-height:1.3;max-width:230px}
+.float b{display:block;font:500 1.35rem/1.1 var(--serif);margin-top:2px}
+.float small{color:var(--muted);font-weight:600;letter-spacing:.06em;text-transform:uppercase;font-size:.66rem}
+.f1{top:7%;left:6%}
+.f2{top:38%;right:5%}
+.f3{bottom:6%;left:6%}
+@media (prefers-reduced-motion: no-preference){
+  .float{animation:bob 6s ease-in-out infinite}
+  .f2{animation-delay:-2s} .f3{animation-delay:-4s}
+  @keyframes bob{50%{transform:translateY(-8px)}}
 }
-.hero .label{display:inline-flex;gap:10px;align-items:center}
-.dot{width:8px;height:8px;border-radius:50%;background:var(--health);box-shadow:0 0 0 4px color-mix(in srgb, var(--health) 22%, transparent)}
-.hero h1{font-size:clamp(2.8rem, 7.4vw, 5.6rem);font-weight:400;letter-spacing:-.01em;margin-top:18px;line-height:1.02}
-.hero h1 em{font-style:italic}
-
-.hero .role{font:500 clamp(1.05rem, 2.2vw, 1.3rem)/1.45 var(--body);color:var(--band-muted);margin-top:12px}
-.hero p.lede{max-width:62ch;font-size:1.08rem;margin-top:22px;color:color-mix(in srgb, var(--band-fg) 88%, transparent)}
-.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:8px;font-weight:600;font-size:.95rem;text-decoration:none;border:1px solid var(--line);color:var(--fg);background:var(--surface);cursor:pointer;font-family:var(--body)}
-.btn.primary{background:var(--ink);border-color:var(--ink);color:var(--bg)}
-.btn:hover{transform:translateY(-1px)}
-.btn{transition:transform .15s}
-
-/* career rail — the one bold element */
-.rail-sec{padding-block:48px 56px}
-.rail-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:14px}
-.rail-head h2{font-size:1.4rem;font-weight:400}
-.rail{display:flex;gap:4px;height:84px}
-.seg{position:relative;border-radius:6px;padding:10px 12px;color:var(--on-seg);text-decoration:none;overflow:hidden;min-width:0;display:flex;flex-direction:column;justify-content:space-between;transition:filter .15s}
-.seg:hover{filter:brightness(1.08)}
-.seg b{font:700 .95rem/1.15 var(--body);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.seg small{font:600 .7rem/1 var(--mono);opacity:.9;white-space:nowrap}
-.s-mastek{flex:18;background:var(--consult)} .s-adp{flex:31;background:var(--hr)} .s-tu{flex:34;background:var(--finance)} .s-hd{flex:22;background:var(--retail)} .s-ch{flex:32;background:var(--health)}
-.ticks{display:flex;justify-content:space-between;margin-top:8px;font:500 .72rem var(--mono);color:var(--muted);font-variant-numeric:tabular-nums}
-.java{display:flex;gap:4px;margin-top:14px}
-.java div{border-top:2px solid var(--signal);padding-top:6px;font:600 .74rem var(--mono);color:var(--muted);min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.java div span{color:var(--fg)}
-@media (max-width:640px){
-  .rail{flex-direction:column;height:auto}
-  .seg{flex:none!important;min-height:52px;flex-direction:row;align-items:center;gap:10px}
-  .ticks,.java{display:none}
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr}
+  .stage{aspect-ratio:1/1;max-width:520px}
 }
+@media (max-width:480px){.float{font-size:.74rem;padding:9px 11px}.float b{font-size:1.1rem}}
 
-/* stats band */
-.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
-.facts div{background:var(--surface);padding:20px}
-.facts strong{display:block;font:400 2.2rem/1 var(--display);color:var(--ink);font-variant-numeric:tabular-nums}
-.facts span{display:block;margin-top:8px;font-size:.88rem;color:var(--muted)}
-@media (max-width:760px){.facts{grid-template-columns:repeat(2,1fr)}}
+/* marquee */
+.trusted{padding-block:64px 0;text-align:center}
+.trusted p{font-size:.95rem;color:var(--muted)}
+.marquee{overflow:hidden;margin-top:22px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.track{display:flex;gap:64px;width:max-content;padding-block:6px}
+.track span{font:500 clamp(1.5rem,2.6vw,2.1rem)/1 var(--serif);color:var(--muted);white-space:nowrap}
+.track span i{font-style:italic}
+@media (prefers-reduced-motion: no-preference){.track{animation:scroll 34s linear infinite}@keyframes scroll{to{transform:translateX(-50%)}}}
+@media (prefers-reduced-motion: reduce){.marquee{-webkit-mask-image:none;mask-image:none}.track{flex-wrap:wrap;justify-content:center;width:auto;gap:18px 40px}.track .dup{display:none}}
 
-section.block{padding-block:72px 8px}
-.sec-title{display:flex;align-items:baseline;gap:14px;margin-bottom:28px;flex-wrap:wrap}
-.sec-title h2{font-size:clamp(1.9rem, 3.8vw, 2.6rem);font-weight:400}
+/* speed comparison */
+.speed{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,5vw,64px);align-items:center}
+.race{background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:clamp(22px,3vw,36px);display:grid;gap:26px}
+.lane{display:grid;gap:10px}
+.lane .top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.lane .who{font-weight:600}
+.lane .val{font:500 2.2rem/1 var(--serif);font-variant-numeric:tabular-nums}
+.bar{height:16px;border-radius:999px;background:var(--pill);overflow:hidden}
+.bar i{display:block;height:100%;border-radius:999px;background:var(--muted);transform-origin:left}
+.bar i.hot{background:var(--coral)}
+@media (prefers-reduced-motion: no-preference){.bar i{animation:grow 1.4s cubic-bezier(.2,.7,.2,1) both}@keyframes grow{from{transform:scaleX(0)}}}
+.race .note{font-size:.9rem;color:var(--muted)}
+.minis{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:clamp(28px,4vw,44px)}
+.mini{border-radius:20px;padding:22px;display:grid;gap:12px;min-width:0}
+.mini h3{font:600 .95rem/1.3 var(--sans);letter-spacing:0}
+.mini .num{font:500 2rem/1 var(--serif);font-variant-numeric:tabular-nums}
+.mini .num s{text-decoration:none;color:var(--muted);font-size:.6em;margin-right:6px}
+.mini .bar{height:8px;background:color-mix(in srgb, var(--ink) 10%, transparent)}
+.mini .src{font-size:.8rem;color:var(--muted)}
+.t-peach{background:var(--peach)} .t-lav{background:var(--lav)} .t-sage{background:var(--sage)} .t-sky{background:var(--sky)} .t-butter{background:var(--butter)}
+@media (max-width:900px){.speed{grid-template-columns:1fr}.minis{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:460px){.minis{grid-template-columns:1fr}}
 
-/* experience ledger */
-.job{display:grid;grid-template-columns:220px 1fr;gap:32px;padding-block:36px;border-top:1px solid var(--line)}
-.job:first-of-type{border-top:0;padding-top:4px}
-.job aside{min-width:0}
-.job .when{font:600 .82rem var(--mono);color:var(--fg);font-variant-numeric:tabular-nums}
-.job .where{font-size:.88rem;color:var(--muted);margin-top:4px}
-.domain{display:inline-block;margin-top:14px;padding:4px 10px;border-radius:999px;font:600 .72rem var(--mono);letter-spacing:.04em;border:1px solid currentColor}
-.d-health{color:var(--health)} .d-retail{color:var(--retail)} .d-finance{color:var(--finance)} .d-hr{color:var(--hr)} .d-consult{color:var(--consult)}
-.job .body{min-width:0}
-.job h3{font-size:1.8rem;font-weight:400}
-.job .title{font-weight:600;color:var(--muted);margin-top:4px}
-.job .pd{margin-top:14px;max-width:68ch}
-.job ul{margin:16px 0 0;padding-left:1.1rem;max-width:70ch}
-.job li{margin-top:8px}
-.job li::marker{color:var(--signal)}
-.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}
-.chip{font:500 .76rem var(--mono);padding:4px 9px;border-radius:5px;background:var(--surface);border:1px solid var(--line);color:var(--fg)}
-@media (max-width:760px){.job{grid-template-columns:1fr;gap:12px}}
+/* experience tabs */
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.tab{font:600 .95rem/1 var(--sans);padding:12px 18px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--muted);cursor:pointer}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.tab span{font-weight:500;opacity:.7;margin-left:6px}
+.panel{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(24px,4vw,48px);background:var(--paper);border:1px solid var(--line);border-radius:28px;padding:clamp(22px,4vw,44px)}
+.no-js .panel + .panel{margin-top:20px}
+.panel .meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:.92rem;color:var(--muted)}
+.panel .meta b{color:var(--ink);font-weight:600}
+.panel h3{font-size:clamp(2.2rem,4vw,3.2rem);line-height:1.05;margin-top:10px}
+.panel .role{font-weight:600;margin-top:6px}
+.panel .pd{color:var(--muted);margin-top:16px;font-size:1rem}
+.panel ul{margin:22px 0 0;padding:0;list-style:none;display:grid;gap:14px}
+.panel li{padding-left:28px;position:relative;font-size:1rem;line-height:1.55}
+.panel li::before{content:"";position:absolute;left:4px;top:.62em;width:10px;height:10px;border-radius:50%;background:var(--coral)}
+.panel li b{font-weight:600}
+.path{border-radius:22px;padding:22px;align-self:start;display:grid;gap:10px;min-width:0}
+.path .eyebrow{margin-bottom:6px}
+.node{background:var(--paper);border-radius:12px;padding:10px 14px;font:500 .8rem/1.4 var(--mono);box-shadow:0 1px 0 color-mix(in srgb, var(--ink) 8%, transparent);position:relative}
+.node + .node{margin-top:12px}
+.node + .node::before{content:"";position:absolute;left:22px;top:-13px;width:2px;height:12px;background:color-mix(in srgb, var(--ink) 30%, transparent)}
+.node small{display:block;font:600 .66rem/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.chip{font:500 .74rem/1 var(--mono);padding:6px 9px;border-radius:999px;background:color-mix(in srgb, var(--paper) 70%, transparent)}
+@media (max-width:900px){.panel{grid-template-columns:1fr}}
+
+/* capabilities */
+.caps{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.cap{border-radius:24px;padding:clamp(24px,3vw,36px);display:grid;gap:12px;align-content:start;min-width:0}
+.cap h3{font-size:clamp(1.7rem,2.6vw,2.2rem);line-height:1.1}
+.cap p{color:var(--ink);opacity:.82;font-size:1.02rem}
+.cap .chips .chip{background:color-mix(in srgb, var(--paper) 75%, transparent)}
+@media (max-width:760px){.caps{grid-template-columns:1fr}}
 
 /* case studies */
-.cases{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-.case{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:24px;display:flex;flex-direction:column;gap:12px;min-width:0}
-.case .from{font:600 .72rem var(--mono);letter-spacing:.08em;text-transform:uppercase}
-.case h3{font-size:1.4rem;font-weight:400}
-.case dl{margin:0;display:grid;gap:10px}
-.case dt{font:600 .72rem var(--mono);color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
-.case dd{margin:2px 0 0;font-size:.95rem}
-.case.wide{grid-column:1 / -1}
-@media (max-width:760px){.cases{grid-template-columns:1fr}}
+.cases{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.case{background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.case .who{font:600 .74rem/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.case .big{font:500 clamp(2.4rem,4vw,3.2rem)/1 var(--serif);color:var(--coral-ink);font-variant-numeric:tabular-nums}
+.case .lbl{font-weight:600;margin-top:-6px}
+.case p{font-size:.98rem;color:var(--muted)}
+@media (max-width:980px){.cases{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:620px){.cases{grid-template-columns:1fr}}
 
-/* skills */
-.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:28px 32px}
-.skills h3{font:600 .78rem var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
-.skills p{margin:0;font-size:.95rem}
-@media (max-width:760px){.skills{grid-template-columns:1fr 1fr}}
-@media (max-width:480px){.skills{grid-template-columns:1fr}}
+/* trust band */
+.band{background:var(--band);color:var(--band-fg);border-radius:32px;padding:clamp(36px,6vw,80px) clamp(22px,5vw,72px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,64px);align-items:center}
+.band h2{font-size:clamp(2.4rem,5vw,4rem);line-height:1.02}
+.band h2 em{color:var(--coral)}
+.band p{color:var(--band-muted);margin-top:18px;font-size:1.08rem}
+.badges{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.badge{border:1px solid color-mix(in srgb, var(--band-fg) 18%, transparent);border-radius:16px;padding:16px 18px;min-width:0}
+.badge b{display:block;font:500 1.4rem/1.1 var(--serif)}
+.badge span{font-size:.85rem;color:var(--band-muted)}
+@media (max-width:860px){.band{grid-template-columns:1fr}}
 
-/* how I work */
-.principles{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
-.principles h3{font-size:1.1rem;font-weight:700;margin-bottom:8px}
-.principles p{margin:0;color:var(--muted);font-size:.95rem}
-@media (max-width:760px){.principles{grid-template-columns:1fr}}
+/* stack */
+.stack{display:grid;grid-template-columns:repeat(3,1fr);gap:28px 36px}
+.stack h3{font:600 .78rem/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.stack p{font-size:1rem}
+@media (max-width:860px){.stack{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.stack{grid-template-columns:1fr}}
 
-/* contact */
-.contact{margin-top:72px;background:var(--band);color:var(--band-fg);border-radius:14px;padding:44px clamp(22px,5vw,52px);display:grid;grid-template-columns:1.4fr 1fr;gap:28px;align-items:center}
-.contact h2{font-size:clamp(1.8rem,3.6vw,2.5rem);font-weight:400}
-.contact p{margin:12px 0 0;opacity:.85;max-width:52ch}
-.contact .lines{display:grid;gap:10px;font:500 .95rem var(--mono);min-width:0}
-.contact .lines a{color:var(--signal);word-break:break-all}
-.contact .lines span{opacity:.7;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;display:block}
-@media (max-width:760px){.contact{grid-template-columns:1fr}}
-footer{padding-block:36px 48px;color:var(--muted);font-size:.85rem;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+/* faq */
+.faq{max-width:860px;margin:0 auto;display:grid;gap:12px}
+.faq details{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:0 24px}
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;align-items:center;padding-block:20px;font-weight:600;font-size:1.08rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font:400 1.8rem/1 var(--serif);color:var(--coral-ink);transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding-bottom:22px;color:var(--muted);font-size:1rem;max-width:68ch}
 
-/* impact strip — numbers from the resume */
-.impact{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden}
-.impact div{background:var(--surface);padding:22px 20px;display:flex;flex-direction:column;gap:8px;min-width:0}
-.impact .from{font:600 .68rem var(--mono);letter-spacing:.1em;text-transform:uppercase}
-.impact strong{font:400 clamp(1.7rem,3vw,2.2rem)/1 var(--display);color:var(--ink);font-variant-numeric:tabular-nums;white-space:nowrap}
-.impact strong s{text-decoration:none;color:var(--muted);font-size:.62em;margin-right:6px}
-.impact span{font-size:.88rem;color:var(--muted)}
-@media (max-width:860px){.impact{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:420px){.impact{grid-template-columns:1fr}}
-
-/* cloud strip under the rail */
-.cloud{display:flex;gap:4px;margin-top:10px}
-.cloud div{border-top:2px solid var(--line);padding-top:6px;font:600 .74rem var(--mono);color:var(--muted);min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.cloud div span{color:var(--fg)}
-@media (max-width:640px){.cloud{display:none}}
-
-/* architecture flow line per client */
-.flow{margin-top:18px;padding:12px 14px;border-radius:8px;background:var(--surface);border:1px solid var(--line);font:500 .78rem/1.7 var(--mono);color:var(--muted);overflow-x:auto}
-.flow b{color:var(--fg);font-weight:600}
-.flow i{font-style:normal;color:var(--signal);padding-inline:4px}
-.flow::before{content:"Request path";display:block;font:600 .66rem var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
-.job li strong{font-weight:700;color:var(--fg)}
-
-/* case metric */
-.case .top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
-.case .metric{font:600 .78rem var(--mono);padding:4px 10px;border-radius:999px;background:var(--signal-soft);color:var(--fg);white-space:nowrap}
-
-/* domains */
-.domains{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.dom{border-top:3px solid currentColor;padding-top:16px;min-width:0}
-.dom h3{font-size:1.25rem;font-weight:400;color:var(--fg)}
-.dom p{margin:8px 0 0;font-size:.92rem;color:var(--muted)}
-.dom .tags{margin-top:12px;font:600 .72rem/1.7 var(--mono);color:var(--fg)}
-@media (max-width:860px){.domains{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:480px){.domains{grid-template-columns:1fr}}
+/* closing */
+.closing{text-align:center;display:grid;justify-items:center;gap:22px;padding-block:clamp(80px,10vw,128px) clamp(56px,8vw,96px)}
+.closing .face{width:120px;height:120px;border-radius:50%;background:var(--lav);overflow:hidden;border:4px solid var(--paper);box-shadow:0 8px 24px rgba(30,20,0,.12)}
+.closing .face img{width:100%;height:100%;object-fit:cover;object-position:50% 12%}
+.closing h2{font-size:clamp(2.8rem,7vw,5.6rem);line-height:1}
+.closing p{color:var(--muted);font-size:1.15rem;max-width:52ch}
+.closing .cta{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.mail{display:inline-flex;align-items:center;gap:10px;font:500 .95rem var(--mono);background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:8px 8px 8px 18px;max-width:100%}
+.mail span{user-select:all;overflow-wrap:anywhere}
+.mail button{font:600 .82rem var(--sans);border:0;border-radius:999px;padding:8px 14px;background:var(--pill);color:var(--ink);cursor:pointer}
+footer{border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-block:28px 40px;font-size:.88rem;color:var(--muted)}
+footer a{color:var(--muted)}
 </style>
 </head>
-<body>
+<body class="no-js">
+<script>document.body.classList.replace('no-js','js')</script>
+
+<div class="announce"><div class="wrap"><b>●</b> Open to Senior Java Full Stack roles across the USA · <a href="https://www.linkedin.com/in/mrudula-nimmala/" target="_blank" rel="noopener">Message me on LinkedIn →</a></div></div>
 
 <nav class="nav" aria-label="Main">
   <div class="wrap">
-    <a class="mark" href="#top">mrudula<span>.</span>nimmala</a>
+    <a class="mark" href="#top">Mrudula <i>Nimmala</i></a>
     <ul>
+      <li><a href="#results">Results</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#work">Case studies</a></li>
-      <li><a href="#domains">Domains</a></li>
       <li><a href="#stack">Stack</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#faq">FAQ</a></li>
     </ul>
+    <a class="btn" href="#contact">Let's talk</a>
   </div>
 </nav>
 
 <main id="top">
-  <div class="hero-band">
   <header class="hero wrap">
-   <div class="hero-text">
-    <div class="label"><i class="dot" aria-hidden="true"></i>Open to Senior Java Full Stack roles · USA</div>
-    <h1>Mrudula <em>Nimmala</em></h1>
-    <div class="role">Senior Java Full Stack Developer · 11 years · Java 21 · Spring Boot 3 · Angular · React · Kafka · GCP · AWS</div>
-    <p class="lede">I design, build and run the Java systems behind regulated, high-volume businesses: pharmaceutical distribution with DSCSA serialization, B2B ordering and PCI card payments, identity and fraud verification, and payroll with NACHA direct deposit. I own services from the API contract to the on-call pager, across Angular and React front ends, Spring Boot microservices, Kafka events and Kubernetes on GCP and AWS.</p>
-    <div class="cta">
-      <a class="btn primary" href="https://www.linkedin.com/in/mrudula-nimmala/" target="_blank" rel="noopener">Connect on LinkedIn</a>
-      <a class="btn" href="#work">See case studies</a>
-      <a class="btn" href="mailto:mrudulan6@gmail.com">mrudulan6@gmail.com</a>
+    <div>
+      <span class="eyebrow">Senior Java Full Stack Developer · 11 years</span>
+      <h1>Java systems that <em>hold up</em> in production.</h1>
+      <p class="lede">I build and run the Spring Boot microservices, Angular and React front ends and Kafka pipelines behind pharma supply chain, B2B payments, identity verification and payroll, from the API contract through on-call support.</p>
+      <div class="cta">
+        <a class="btn" href="https://www.linkedin.com/in/mrudula-nimmala/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+        <a class="btn pill" href="#work">See my work ↓</a>
+      </div>
+      <p class="stackline">Java 21 · Spring Boot 3 · Spring AI · Angular 19 · React · Kafka · GCP · AWS</p>
     </div>
-   </div>
-   <figure class="portrait">
-     <div class="arch" aria-hidden="true"></div>
-     <img src="assets/mrudula-cutout.webp" width="760" height="912" alt="Mrudula Nimmala, Senior Java Full Stack Developer">
-     <figcaption><i aria-hidden="true"></i>Available · Senior Java Full Stack</figcaption>
-   </figure>
+    <figure class="stage" aria-label="Portrait with selected results">
+      <img src="assets/mrudula-cutout.webp" width="760" height="912" alt="Mrudula Nimmala, Senior Java Full Stack Developer">
+      <div class="float f1"><small>PCF → GKE migration</small><b>90 → 35 min</b>average release time</div>
+      <div class="float f2"><small>Pricing lookups</small><b>350 → 120 ms</b>p95 at peak</div>
+      <div class="float f3"><small>Production P1</small><b>~70 min</b>to restore, then a CI guard</div>
+    </figure>
   </header>
-  </div>
 
-  <section class="rail-sec wrap" aria-labelledby="rail-h">
-    <div class="rail-head">
-      <h2 id="rail-h">Career at a glance</h2>
-      <span class="label">Drawn to scale · May 2015 → present</span>
-    </div>
-    <div class="rail">
-      <a class="seg s-mastek" href="#mastek"><b>Mastek</b><small>2015–16</small></a>
-      <a class="seg s-adp" href="#adp"><b>ADP</b><small>2016–19</small></a>
-      <a class="seg s-tu" href="#transunion"><b>TransUnion</b><small>2019–22</small></a>
-      <a class="seg s-hd" href="#homedepot"><b>Home Depot</b><small>2022–24</small></a>
-      <a class="seg s-ch" href="#cardinal"><b>Cardinal Health</b><small>2024–now</small></a>
-    </div>
-    <div class="ticks" aria-hidden="true"><span>2015</span><span>2017</span><span>2019</span><span>2021</span><span>2023</span><span>2025</span><span>2026</span></div>
-    <div class="java" aria-label="Java versions over time">
-      <div style="flex:49"><span>Java 8</span> · Boot 1.x</div>
-      <div style="flex:34"><span>Java 11</span> · Boot 2.x</div>
-      <div style="flex:22"><span>Java 11/17</span></div>
-      <div style="flex:32"><span>Java 21</span> · Boot 3.x</div>
-    </div>
-    <div class="cloud" aria-label="Platforms over time">
-      <div style="flex:18"><span>Tomcat</span></div>
-      <div style="flex:31"><span>Azure</span> App Service</div>
-      <div style="flex:56"><span>AWS</span> · EKS</div>
-      <div style="flex:32"><span>GCP</span> · GKE</div>
-    </div>
-  </section>
-
-  <div class="wrap">
-    <div class="impact" aria-label="Selected results">
-      <div><span class="from d-health">Cardinal Health</span><strong><s>90 →</s>35 min</strong><span>average release time after migrating services from PCF to GKE</span></div>
-      <div><span class="from d-health">Cardinal Health</span><strong><s>350 →</s>120 ms</strong><span>p95 pricing lookups at peak, with ~40% fewer pricing database reads</span></div>
-      <div><span class="from d-finance">TransUnion</span><strong><s>1.8 s →</s>450 ms</strong><span>p95 on slow identity-verification queries through Oracle tuning</span></div>
-      <div><span class="from d-retail">Home Depot</span><strong>~70 min</strong><span>to restore a production P1 incident, then add a CI guard so it can't recur</span></div>
-    </div>
-  </div>
-
-  <section class="block wrap" id="experience" aria-labelledby="exp-h">
-    <div class="sec-title"><h2 id="exp-h">Experience</h2><span class="label">Most recent first</span></div>
-
-    <article class="job" id="cardinal">
-      <aside>
-        <div class="when">Mar 2024 – Present</div>
-        <div class="where">Dublin, OH</div>
-        <span class="domain d-health">Pharma supply chain</span>
-      </aside>
-      <div class="body">
-        <h3>Cardinal Health</h3>
-        <div class="title">Senior Full Stack Developer · Onboarding &amp; fulfilment microservices</div>
-        <p class="pd">Pharmaceutical supply chain and distribution platform that moves product from manufacturers and distribution centres to hospitals and clinics: customer onboarding, order capture, pricing validation, inventory allocation, warehouse fulfilment, shipment tracking, returns, recalls, DSCSA product serialization and exception reporting.</p>
-        <div class="flow"><b>Angular / React</b><i>→</i>Apigee + Okta SSO<i>→</i><b>Java 21 · Spring Boot 3.x</b><i>→</i>Cloud SQL · BigQuery · Memorystore · Elasticsearch<i>→</i><b>Kafka + Pub/Sub</b><i>→</i>GKE via Concourse<i>→</i>Cloud Monitoring</div>
-        <ul>
-          <li><strong>Migrated</strong> onboarding and fulfilment microservices from PCF (Tanzu) to GKE with Docker, Helm, Concourse pipelines, Cloud Build, Artifact Registry and Python deployment checks, cutting average release time from ~90 to ~35 minutes.</li>
-          <li><strong>Split data by access pattern:</strong> Cloud SQL for orders and pricing, BigQuery for audit and reporting, Cloud Storage for archives, Memorystore (Redis) cache-aside with TTL, and Elasticsearch for search. Pricing reads dropped ~40% and p95 lookups fell from ~350 ms to ~120 ms at peak.</li>
-          <li><strong>Published</strong> allocated-order and DSCSA serialization (EPCIS) events on Kafka with idempotent consumers keyed on a processed-event ID, so redelivered events never create duplicate fulfilment or traceability records.</li>
-          <li><strong>Secured</strong> APIs through Apigee with Okta SSO and OAuth 2.0 scopes enforced by Spring Security, least-privilege GCP IAM per service via Workload Identity, secrets in Secret Manager, and versioned Swagger/OpenAPI contracts shared with hospital, warehouse and reporting teams.</li>
-          <li><strong>Built</strong> Angular 17 operations screens, later upgraded to Angular 19, and React/TypeScript customer dashboards. Also built Claude AI semantic order search with Spring AI and Elasticsearch, and Spring Batch + Groovy jobs that sync inventory with warehouse management systems.</li>
-          <li><strong>Own</strong> services as a senior engineer: estimating story cards with product owners, serving on the on-call rotation, mentoring developers through code reviews, and enforcing JUnit, Mockito, Playwright, SonarQube and Veracode quality gates.</li>
-        </ul>
-        <div class="chips"><span class="chip">Java 21</span><span class="chip">Spring Boot 3.x</span><span class="chip">Spring Batch</span><span class="chip">Spring AI</span><span class="chip">Angular 17/19</span><span class="chip">React</span><span class="chip">Apigee</span><span class="chip">Okta</span><span class="chip">Kafka</span><span class="chip">Pub/Sub</span><span class="chip">Cloud SQL</span><span class="chip">BigQuery</span><span class="chip">Redis</span><span class="chip">Elasticsearch</span><span class="chip">GKE</span><span class="chip">Concourse</span><span class="chip">DSCSA / EPCIS</span></div>
+  <section class="trusted wrap" aria-label="Clients">
+    <p>Trusted with production systems at</p>
+    <div class="marquee">
+      <div class="track">
+        <span>Cardinal Health</span><span>Home Depot</span><span>TransUnion</span><span>ADP</span><span>Mastek <i>for TotalEnergies</i></span>
+        <span class="dup" aria-hidden="true">Cardinal Health</span><span class="dup" aria-hidden="true">Home Depot</span><span class="dup" aria-hidden="true">TransUnion</span><span class="dup" aria-hidden="true">ADP</span><span class="dup" aria-hidden="true">Mastek <i>for TotalEnergies</i></span>
       </div>
-    </article>
-
-    <article class="job" id="homedepot">
-      <aside>
-        <div class="when">May 2022 – Feb 2024</div>
-        <div class="where">Atlanta, GA</div>
-        <span class="domain d-retail">B2B retail · Payments</span>
-      </aside>
-      <div class="body">
-        <h3>Home Depot</h3>
-        <div class="title">Senior Full Stack Developer</div>
-        <p class="pd">B2B bulk order management and omnichannel fulfilment platform for contractors, builders and enterprise customers across web, mobile, store and assisted sales: account validation, contract pricing, multi-line bulk carts, inventory reservation, split fulfilment, payments and refunds.</p>
-        <div class="flow"><b>React / TypeScript</b><i>→</i>API Gateway + Spring Security (OAuth 2.0, JWT, RBAC)<i>→</i><b>Java 11/17 · Spring Boot · REST + GraphQL</b><i>→</i>RDS PostgreSQL · Cassandra · Varnish · ElastiCache<i>→</i><b>Kafka</b><i>→</i>EKS via Jenkins + Harness<i>→</i>Prometheus</div>
-        <ul>
-          <li><strong>Built a PCI DSS Payment Service</strong> with tokenized cards and PO payments: authorize at checkout, capture per shipment for split orders, handle partial refunds, and use idempotency keys so retries never double-charge. Settlement is reconciled from S3 with Airflow.</li>
-          <li><strong>Prevented duplicate orders</strong> under concurrent bulk submissions by persisting idempotency keys, order headers and line-level reservation state in PostgreSQL before downstream processing. Duplicate-order tickets fell from a few a week to about one a month.</li>
-          <li><strong>Orchestrated</strong> pricing approval, PO/payment validation, multi-location fulfilment and exception recovery with Camunda BPMN, plus Apache Camel routes for transformation, enrichment and retries.</li>
-          <li><strong>Streamed</strong> order, pricing and inventory events from Kafka into BigQuery with Dataflow, and scheduled daily loads as Airflow DAGs on MWAA, giving merchandising teams near real-time reporting.</li>
-          <li><strong>Kept bulk orders responsive at peak</strong> with virtualized React rendering, Elasticsearch SKU autocomplete, memoized selectors, debounced calls and Varnish edge caching of catalog and pricing.</li>
-          <li><strong>Resolved a P1</strong> where a Helm values change pointed production at a QA Secrets Manager path. I traced it through pod config, rolled back, restored service in ~70 minutes, and added a CI check that validates secret paths per environment.</li>
-        </ul>
-        <div class="chips"><span class="chip">Java 11/17</span><span class="chip">Spring Boot</span><span class="chip">GraphQL</span><span class="chip">React</span><span class="chip">PostgreSQL</span><span class="chip">Cassandra</span><span class="chip">Kafka</span><span class="chip">RabbitMQ</span><span class="chip">PCI DSS</span><span class="chip">Camunda BPMN</span><span class="chip">Apache Camel</span><span class="chip">Airflow (MWAA)</span><span class="chip">Dataflow</span><span class="chip">EKS</span><span class="chip">Terraform</span><span class="chip">Harness CD</span></div>
-      </div>
-    </article>
-
-    <article class="job" id="transunion">
-      <aside>
-        <div class="when">Jul 2019 – Apr 2022</div>
-        <div class="where">Chicago, IL</div>
-        <span class="domain d-finance">Identity &amp; fraud</span>
-      </aside>
-      <div class="body">
-        <h3>TransUnion</h3>
-        <div class="title">Java Full Stack Developer</div>
-        <p class="pd">Customer identity verification and fraud-risk platform for new-account opening, loan processing, new-device access, document verification, OTP authentication and high-risk transaction review, integrating TruValidate and iovation.</p>
-        <div class="flow"><b>Angular / TypeScript</b><i>→</i>API Gateway + Spring Security<i>→</i><b>Java 11 · Spring Boot 2.1 · REST + gRPC</b><i>→</i>TruValidate · iovation · Oracle<i>→</i><b>Kafka + SNS</b><i>→</i>EKS via CodePipeline<i>→</i>Splunk · Grafana</div>
-        <ul>
-          <li><strong>Cut p95</strong> on slow verification queries from ~1.8 s to ~450 ms through Oracle indexing and execution-plan tuning behind Spring Data JPA and Hibernate.</li>
-          <li><strong>Decoupled</strong> verification, OTP and fraud-risk processing with Kafka consumer groups, correlation IDs, retries, idempotent processing and dead-letter topics, so a failed event is isolated and safely replayed instead of stalling the pipeline.</li>
-          <li><strong>Chose gRPC</strong> with Protocol Buffers for low-latency internal calls, and kept REST with Swagger/OpenAPI contracts for TruValidate, iovation and banking integrations.</li>
-          <li><strong>Reduced MTTR</strong> for verification incidents from ~2 hours to ~50 minutes with Splunk logs, Prometheus and Grafana metrics, Cucumber BDD suites and EKS deployments through CodePipeline.</li>
-          <li><strong>Moved secrets out of code</strong> into HashiCorp Vault and centralized config in Spring Cloud Config. Delivered in SAFe PI increments with product and fraud architecture teams.</li>
-        </ul>
-        <div class="chips"><span class="chip">Java 11</span><span class="chip">Spring Boot 2.1</span><span class="chip">gRPC</span><span class="chip">Angular</span><span class="chip">Oracle</span><span class="chip">Kafka</span><span class="chip">Amazon SNS</span><span class="chip">HashiCorp Vault</span><span class="chip">EKS</span><span class="chip">CodePipeline</span><span class="chip">Splunk</span><span class="chip">Grafana</span><span class="chip">Cucumber</span></div>
-      </div>
-    </article>
-
-    <article class="job" id="adp">
-      <aside>
-        <div class="when">Dec 2016 – Jun 2019</div>
-        <div class="where">Roseland, NJ</div>
-        <span class="domain d-hr">HR &amp; payroll</span>
-      </aside>
-      <div class="body">
-        <h3>ADP</h3>
-        <div class="title">Java Full Stack Developer</div>
-        <p class="pd">HR, payroll and employee self-service platform covering employee profiles, payroll processing, direct deposit, tax deductions, benefits enrolment, time and attendance, PTO and manager approvals.</p>
-        <div class="flow"><b>React 15/16 + Redux</b><i>→</i><b>Java 8 · Spring Boot 1.4</b><i>→</i>Oracle · Redis<i>→</i>ActiveMQ + Spring Batch<i>→</i>Azure App Service via Jenkins</div>
-        <ul>
-          <li><strong>Built payroll services</strong> for gross-to-net pay, federal and state tax withholding and benefit deductions, generating NACHA ACH files with Spring Batch for direct deposit.</li>
-          <li><strong>Cut the nightly payroll batch</strong> from ~5 to ~3.5 hours by automating reconciliation with ActiveMQ, Spring Batch and Azure Blob Storage staging.</li>
-          <li><strong>Reduced repeated database calls ~30%</strong> and page load from ~2 s to ~1.1 s by tuning Oracle PL/SQL and caching reference data in Redis.</li>
-          <li><strong>Protected payroll PII</strong> by masking SSNs and bank accounts in React self-service modules and encrypting them at rest, behind role-based Spring Security APIs.</li>
-        </ul>
-        <div class="chips"><span class="chip">Java 8</span><span class="chip">Spring Boot 1.4</span><span class="chip">React 15/16</span><span class="chip">Redux</span><span class="chip">Oracle</span><span class="chip">PL/SQL</span><span class="chip">Redis</span><span class="chip">ActiveMQ</span><span class="chip">Spring Batch</span><span class="chip">NACHA / ACH</span><span class="chip">Azure</span></div>
-      </div>
-    </article>
-
-    <article class="job" id="mastek">
-      <aside>
-        <div class="when">May 2015 – Oct 2016</div>
-        <div class="where">Mumbai, India</div>
-        <span class="domain d-consult">Retail e-commerce</span>
-      </aside>
-      <div class="body">
-        <h3>Mastek <span style="font-family:var(--body);font-size:1rem;color:var(--muted)">for Total (now TotalEnergies)</span></h3>
-        <div class="title">Java Developer</div>
-        <p class="pd">Retail mobile storefront supporting product search, cart, checkout, order placement, customer profiles, order tracking and loyalty rewards.</p>
-        <div class="flow"><b>AngularJS</b><i>→</i><b>Java 8 · Spring Boot on Tomcat</b><i>→</i>Hibernate/JPA · MySQL<i>→</i>Apache Camel + SOAP/XML legacy integrations</div>
-        <ul>
-          <li><strong>Implemented loyalty-rewards workflows</strong> for enrolment, points calculation, redemption validation and order-level benefits, validated against legacy loyalty data before go-live.</li>
-          <li><strong>Raised automated test coverage</strong> from ~55% to ~80% across catalog, cart, checkout and order tracking by expanding JUnit suites and resolving SonarQube violations.</li>
-          <li><strong>Integrated legacy systems</strong> through Apache Camel routes and SOAP/XML services with validation, transformation and exception handling, tracking errors in Splunk.</li>
-        </ul>
-        <div class="chips"><span class="chip">Java 8</span><span class="chip">Spring Boot</span><span class="chip">AngularJS</span><span class="chip">MySQL</span><span class="chip">Tomcat</span><span class="chip">Apache Camel</span><span class="chip">SOAP</span><span class="chip">Jenkins</span></div>
-      </div>
-    </article>
-  </section>
-
-  <section class="block wrap" id="work" aria-labelledby="work-h">
-    <div class="sec-title"><h2 id="work-h">Case studies</h2><span class="label">Decisions, trade-offs, results</span></div>
-    <div class="cases">
-      <article class="case">
-        <div class="top"><span class="from d-health">Cardinal Health · Platform</span><span class="metric">90 → 35 min releases</span></div>
-        <h3>Moving supply chain services from PCF to GKE</h3>
-        <dl>
-          <dt>Problem</dt><dd>Onboarding and fulfilment microservices ran on PCF (Tanzu) and had to move to GKE without breaking hospital and clinic integrations.</dd>
-          <dt>Approach</dt><dd>Service-by-service cutover: buildpacks became Dockerfiles, manifests became Helm values, and service bindings moved to Secret Manager with Workload Identity. Concourse runs build, test, scan and deploy, with Cloud Build images in Artifact Registry and Python deployment checks.</dd>
-          <dt>Result</dt><dd>Average release time fell from ~90 to ~35 minutes, with health and latency visible in Cloud Monitoring.</dd>
-        </dl>
-      </article>
-      <article class="case">
-        <div class="top"><span class="from d-health">Cardinal Health · Data</span><span class="metric">p95 350 → 120 ms</span></div>
-        <h3>One store per access pattern</h3>
-        <dl>
-          <dt>Problem</dt><dd>Orders, pricing, audit data, archives and product search have very different access patterns, and peak pricing lookups were driving repeated database reads.</dd>
-          <dt>Approach</dt><dd>Cloud SQL for orders and pricing, BigQuery for audit and reporting, Cloud Storage for archives, Elasticsearch for search, and Memorystore cache-aside with TTL for pricing. Final order validation always reads Cloud SQL, so a stale cache can never price an order.</dd>
-          <dt>Result</dt><dd>~40% fewer pricing reads, and p95 pricing lookups fell from ~350 ms to ~120 ms at peak.</dd>
-        </dl>
-      </article>
-      <article class="case">
-        <div class="top"><span class="from d-retail">Home Depot · Payments</span><span class="metric">PCI DSS</span></div>
-        <h3>Capture per shipment, never charge twice</h3>
-        <dl>
-          <dt>Problem</dt><dd>Split B2B orders ship in parts, so payment has to be captured per shipment, support partial refunds, and stay safe under retries.</dd>
-          <dt>Approach</dt><dd>A Spring Boot Payment Service on a third-party gateway with tokenized cards: authorize at checkout, capture per shipment, refund partially, guard every call with an idempotency key, publish status on RabbitMQ, and reconcile settlement from S3 with Airflow.</dd>
-          <dt>Result</dt><dd>Customers are charged per shipment on split orders, and retries never double-charge.</dd>
-        </dl>
-      </article>
-      <article class="case">
-        <div class="top"><span class="from d-retail">Home Depot · Concurrency</span><span class="metric">weekly → ~monthly</span></div>
-        <h3>No duplicate bulk orders under retry</h3>
-        <dl>
-          <dt>Problem</dt><dd>Concurrent bulk submissions from contractors and enterprise customers were creating duplicate orders.</dd>
-          <dt>Approach</dt><dd>Persist the idempotency key, order header and line-level reservation state in PostgreSQL before any downstream call. Camunda then orchestrates split fulfilment and exception recovery.</dd>
-          <dt>Result</dt><dd>Duplicate-order tickets dropped from a few per week to about one a month.</dd>
-        </dl>
-      </article>
-      <article class="case">
-        <div class="top"><span class="from d-health">Cardinal Health · Events</span><span class="metric">DSCSA / EPCIS</span></div>
-        <h3>Traceability events that are safe to redeliver</h3>
-        <dl>
-          <dt>Problem</dt><dd>Allocated-order and serialization events feed warehouse, shipment and traceability workflows. Kafka guarantees at-least-once delivery, and consumer groups alone don't remove duplicates.</dd>
-          <dt>Approach</dt><dd>Idempotent Spring Kafka consumers keyed on a processed-event ID, with Kafka for high-volume ordered streams and Google Pub/Sub for GCP-native fan-out.</dd>
-          <dt>Result</dt><dd>Redelivered events never create duplicate fulfilment or traceability records.</dd>
-        </dl>
-      </article>
-      <article class="case">
-        <div class="top"><span class="from d-finance">TransUnion · Performance</span><span class="metric">1.8 s → 450 ms</span></div>
-        <h3>Fixing the slowest verification queries</h3>
-        <dl>
-          <dt>Problem</dt><dd>Slow identity-verification queries on Oracle were holding up account-opening and loan verification flows.</dd>
-          <dt>Approach</dt><dd>Indexing and execution-plan tuning on Oracle behind Spring Data JPA and Hibernate, keeping profiles, verification status, OTP state and fraud records consistent.</dd>
-          <dt>Result</dt><dd>p95 on the slow queries fell from ~1.8 s to ~450 ms.</dd>
-        </dl>
-      </article>
-      <article class="case wide">
-        <div class="top"><span class="from d-retail">Home Depot · Production incident</span><span class="metric">restored in ~70 min</span></div>
-        <h3>P1: production reading a QA secret</h3>
-        <dl>
-          <dt>Problem</dt><dd>A Helm values change made a production Kubernetes deployment read a QA AWS Secrets Manager path, and customer order-history calls began failing.</dd>
-          <dt>Approach</dt><dd>Traced the failure through pod configuration to the wrong secret path and rolled back.</dd>
-          <dt>Result</dt><dd>Service restored in ~70 minutes. A new CI check now validates secret paths per environment before every production deployment.</dd>
-        </dl>
-      </article>
     </div>
   </section>
 
-  <section class="block wrap" id="domains" aria-labelledby="dom-h">
-    <div class="sec-title"><h2 id="dom-h">Domain depth</h2><span class="label">Four regulated, high-volume businesses</span></div>
-    <div class="domains">
-      <div class="dom d-health"><h3>Pharma supply chain</h3><p>Order-to-shipment flows for hospitals and clinics, with serialized product traceability and warehouse integration.</p><div class="tags">DSCSA · EPCIS · WMS · recalls</div></div>
-      <div class="dom d-retail"><h3>B2B retail &amp; payments</h3><p>Contract pricing, bulk carts and split fulfilment, with card and PO payments captured per shipment.</p><div class="tags">PCI DSS · tokenization · idempotency</div></div>
-      <div class="dom d-finance"><h3>Identity &amp; fraud</h3><p>Account opening, device risk, OTP and document checks for banking clients.</p><div class="tags">TruValidate · iovation · OTP</div></div>
-      <div class="dom d-hr"><h3>HR &amp; payroll</h3><p>Gross-to-net pay, tax withholding, benefits and direct deposit, with payroll PII protected end to end.</p><div class="tags">NACHA / ACH · PII masking</div></div>
+  <section class="sec wrap" id="results" aria-labelledby="res-h">
+    <div class="speed">
+      <div class="sec-head" style="margin-bottom:0">
+        <span class="eyebrow">Results</span>
+        <h2 id="res-h">Releases in <em>35 minutes,</em> not 90.</h2>
+        <p>At Cardinal Health I moved onboarding and fulfilment microservices from PCF (Tanzu) to GKE, with Docker, Helm, Concourse pipelines, Cloud Build, Flyway migrations and Python deployment checks.</p>
+      </div>
+      <div class="race" role="img" aria-label="Average release time: 90 minutes on PCF, 35 minutes on GKE">
+        <div class="lane">
+          <div class="top"><span class="who">Before · PCF (Tanzu)</span><span class="val">90 min</span></div>
+          <div class="bar"><i style="width:100%"></i></div>
+        </div>
+        <div class="lane">
+          <div class="top"><span class="who">After · GKE via Concourse</span><span class="val">35 min</span></div>
+          <div class="bar"><i class="hot" style="width:38.9%"></i></div>
+        </div>
+        <p class="note">Average release time per deployment. Bars drawn to scale.</p>
+      </div>
+    </div>
+    <div class="minis">
+      <div class="mini t-peach"><h3>p95 pricing lookups</h3><div class="num"><s>350 →</s>120 ms</div><div class="bar"><i class="hot" style="width:34%"></i></div><span class="src">Cardinal Health · cache-aside on Memorystore</span></div>
+      <div class="mini t-lav"><h3>Slow verification queries</h3><div class="num"><s>1.8 s →</s>450 ms</div><div class="bar"><i class="hot" style="width:25%"></i></div><span class="src">TransUnion · Oracle indexing and plan tuning</span></div>
+      <div class="mini t-sage"><h3>Incident MTTR</h3><div class="num"><s>2 h →</s>50 min</div><div class="bar"><i class="hot" style="width:41.7%"></i></div><span class="src">TransUnion · Splunk, Prometheus, Grafana</span></div>
+      <div class="mini t-sky"><h3>Nightly payroll batch</h3><div class="num"><s>5 h →</s>3.5 h</div><div class="bar"><i class="hot" style="width:70%"></i></div><span class="src">ADP · ActiveMQ and Spring Batch</span></div>
     </div>
   </section>
 
-  <section class="block wrap" id="stack" aria-labelledby="stack-h">
-    <div class="sec-title"><h2 id="stack-h">Stack</h2><span class="label">Used in production on client projects</span></div>
-    <div class="skills">
-      <div><h3>Backend</h3><p>Java 8 / 11 / 17 / 21, Spring Boot 1.x–3.x, Spring MVC, Spring Security, Spring Data JPA, Spring Batch, Spring Kafka, Spring Cloud Config, Spring AI, Hibernate, Groovy, Python</p></div>
-      <div><h3>Frontend</h3><p>Angular 17/19, AngularJS, RxJS, React, Redux Toolkit, TypeScript, lazy loading, virtualized rendering, responsive design</p></div>
-      <div><h3>APIs &amp; integration</h3><p>REST, GraphQL, gRPC / Protocol Buffers, SOAP/XML, OpenAPI, Apigee, Amazon API Gateway, Camunda BPMN, Apache Camel</p></div>
-      <div><h3>Messaging &amp; data pipelines</h3><p>Apache Kafka, Google Pub/Sub, RabbitMQ, ActiveMQ, Amazon SNS, Apache Airflow, Google Dataflow</p></div>
-      <div><h3>Data</h3><p>Oracle, PostgreSQL, MySQL, Cassandra, BigQuery, Redis, Varnish, Elasticsearch, SQL &amp; PL/SQL tuning</p></div>
-      <div><h3>Cloud &amp; delivery</h3><p>GCP (GKE, Cloud SQL, Pub/Sub, BigQuery), AWS (EKS, RDS, S3, MWAA), Azure, Docker, Kubernetes, Helm, Terraform, PCF, Concourse, Jenkins, Harness CD</p></div>
-      <div><h3>Security</h3><p>OAuth 2.0, JWT, RBAC, Okta SSO, GCP &amp; AWS IAM, HashiCorp Vault, Veracode, PCI DSS, PII masking</p></div>
-      <div><h3>Quality &amp; observability</h3><p>JUnit 5, Mockito, Cucumber, Playwright, REST Assured, SonarQube, Splunk, Prometheus, Grafana, Cloud Monitoring</p></div>
-      <div><h3>AI &amp; ways of working</h3><p>Claude AI, Spring AI, GitHub Copilot, Agile / SAFe, on-call and RCA, code reviews, mentoring</p></div>
+  <section class="sec wrap" id="experience" aria-labelledby="exp-h">
+    <div class="sec-head">
+      <span class="eyebrow">Experience</span>
+      <h2 id="exp-h">Five platforms, <em>one way of building.</em></h2>
+      <p>Each one regulated or high-volume, each one owned from the request path to production.</p>
     </div>
-  </section>
 
-  <section class="block wrap" aria-labelledby="how-h">
-    <div class="sec-title"><h2 id="how-h">How I work</h2></div>
-    <div class="principles">
-      <div><h3>Design for the failure case</h3><p>Idempotency keys, retries, dead-letter topics and rollback paths go in on day one, not after the first incident.</p></div>
-      <div><h3>Own it in production</h3><p>I'm on the on-call rotation for what I build. Correlation IDs, health checks and dashboards ship with the code, so problems are found in minutes.</p></div>
-      <div><h3>Make the team faster</h3><p>Story-card estimates with product owners, code reviews that teach, and pipeline guards that stop the same mistake twice.</p></div>
+    <div class="tabs" role="tablist" aria-label="Clients">
+      <button class="tab" role="tab" id="t-ch" aria-controls="p-ch" aria-selected="true">Cardinal Health<span>2024–now</span></button>
+      <button class="tab" role="tab" id="t-hd" aria-controls="p-hd" aria-selected="false" tabindex="-1">Home Depot<span>2022–24</span></button>
+      <button class="tab" role="tab" id="t-tu" aria-controls="p-tu" aria-selected="false" tabindex="-1">TransUnion<span>2019–22</span></button>
+      <button class="tab" role="tab" id="t-adp" aria-controls="p-adp" aria-selected="false" tabindex="-1">ADP<span>2016–19</span></button>
+      <button class="tab" role="tab" id="t-ms" aria-controls="p-ms" aria-selected="false" tabindex="-1">Mastek<span>2015–16</span></button>
     </div>
-  </section>
 
-  <div class="wrap">
-    <section class="contact" id="contact" aria-labelledby="contact-h">
+    <article class="panel" role="tabpanel" id="p-ch" aria-labelledby="t-ch">
       <div>
-        <h2 id="contact-h">Let's talk about your next platform.</h2>
-        <p>Open to Senior Java Full Stack, Senior Backend Java and Java Cloud (GCP / AWS) roles across the USA.</p>
+        <div class="meta"><b>Mar 2024 – Present</b><span>Dublin, OH</span><span>Pharma supply chain · GCP</span></div>
+        <h3>Cardinal Health</h3>
+        <div class="role">Senior Full Stack Developer · onboarding &amp; fulfilment microservices</div>
+        <p class="pd">Pharmaceutical supply chain and distribution platform moving product from manufacturers and distribution centres to hospitals and clinics: onboarding, order capture, pricing, inventory allocation, warehouse fulfilment, shipment tracking, returns, recalls and DSCSA product serialization.</p>
+        <ul>
+          <li><b>Migrated</b> onboarding and fulfilment services from PCF (Tanzu) to GKE with Docker, Helm, Concourse, Cloud Build, Flyway and Python deployment checks, cutting average release time from 90 to 35 minutes.</li>
+          <li><b>Built AI order search</b> on Claude with Spring AI, using RAG over Elasticsearch vectors, Vertex AI (Gemini) as fallback and PII-redaction guardrails on every prompt.</li>
+          <li><b>Split data by access pattern</b> across Cloud SQL, BigQuery, Cloud Storage, Memorystore cache-aside and Elasticsearch, cutting pricing reads 40% and p95 lookups from 350 to 120 ms at peak.</li>
+          <li><b>Published</b> allocated-order and DSCSA serialization (EPCIS) events on Kafka with idempotent consumers, so redelivered events never duplicate fulfilment or traceability records.</li>
+          <li><b>Built</b> Angular 17 operations screens, later upgraded to Angular 19, plus Spring Batch and Groovy jobs that sync inventory with warehouse management systems.</li>
+          <li><b>Own</b> services as a senior engineer: story-card estimates with product owners, on-call rotation, code-review mentoring, and Copilot and Claude for tests and PR reviews behind JUnit, Playwright, SonarQube and Veracode gates.</li>
+        </ul>
       </div>
-      <div class="lines">
-        <div><span>Email</span><a href="mailto:mrudulan6@gmail.com">mrudulan6@gmail.com</a></div>
-        <div><span>LinkedIn</span><a href="https://www.linkedin.com/in/mrudula-nimmala/" target="_blank" rel="noopener">linkedin.com/in/mrudula-nimmala</a></div>
+      <aside class="path t-peach" aria-label="Request path">
+        <span class="eyebrow">Request path</span>
+        <div class="node"><small>UI</small>Angular 17 → 19 dashboards</div>
+        <div class="node"><small>Edge &amp; identity</small>Apigee · Okta SSO · OAuth 2.0</div>
+        <div class="node"><small>Services</small>Java 21 · Spring Boot 3.x · Spring AI</div>
+        <div class="node"><small>Data</small>Cloud SQL · BigQuery · Memorystore · Elasticsearch</div>
+        <div class="node"><small>Events</small>Apache Kafka · Google Pub/Sub</div>
+        <div class="node"><small>Run</small>GKE via Concourse · Cloud Monitoring</div>
+        <div class="chips"><span class="chip">DSCSA / EPCIS</span><span class="chip">Vertex AI</span><span class="chip">RAG</span><span class="chip">Flyway</span><span class="chip">Veracode</span></div>
+      </aside>
+    </article>
+
+    <article class="panel" role="tabpanel" id="p-hd" aria-labelledby="t-hd" hidden>
+      <div>
+        <div class="meta"><b>May 2022 – Feb 2024</b><span>Atlanta, GA</span><span>B2B retail &amp; payments · AWS</span></div>
+        <h3>Home Depot</h3>
+        <div class="role">Senior Full Stack Developer</div>
+        <p class="pd">B2B bulk order management and omnichannel fulfilment platform for contractors, builders and enterprise customers: account validation, contract pricing, multi-line bulk carts, inventory reservation, split fulfilment, payments and refunds.</p>
+        <ul>
+          <li><b>Built a PCI DSS Payment Service</b> with tokenized cards and PO payments: authorize at checkout, capture per shipment, partial refunds, and idempotency keys so retries never double-charge.</li>
+          <li><b>Prevented duplicate orders</b> by persisting idempotency keys and line-level reservation state in PostgreSQL first, cutting duplicate-order tickets from a few a week to about one a month.</li>
+          <li><b>Orchestrated</b> pricing approval, PO/payment validation and multi-location fulfilment with Camunda BPMN and Apache Camel routes.</li>
+          <li><b>Streamed</b> order, pricing and inventory events from Kafka into BigQuery with Dataflow, with daily loads as Airflow DAGs on Amazon MWAA.</li>
+          <li><b>Resolved a P1</b> where a Helm values change pointed production at a QA secret path: rolled back, restored service in about 70 minutes, and added a CI check on secret paths.</li>
+        </ul>
       </div>
-    </section>
-    <footer>
-      <span>© 2026 Mrudula Nimmala</span>
-      <span>B.Tech, Computer Science &amp; Engineering · JNTU Kakinada</span>
-    </footer>
-  </div>
+      <aside class="path t-lav" aria-label="Request path">
+        <span class="eyebrow">Request path</span>
+        <div class="node"><small>UI</small>React · TypeScript · Redux Toolkit</div>
+        <div class="node"><small>Edge &amp; identity</small>API Gateway · Spring Security · OAuth 2.0 · JWT</div>
+        <div class="node"><small>Services</small>Java 11/17 · Spring Boot · REST + GraphQL</div>
+        <div class="node"><small>Data</small>RDS PostgreSQL · Cassandra · Varnish · ElastiCache</div>
+        <div class="node"><small>Events</small>Apache Kafka · RabbitMQ</div>
+        <div class="node"><small>Run</small>EKS via Jenkins + Harness CD · Prometheus</div>
+        <div class="chips"><span class="chip">PCI DSS</span><span class="chip">Camunda</span><span class="chip">Liquibase</span><span class="chip">Terraform</span></div>
+      </aside>
+    </article>
+
+    <article class="panel" role="tabpanel" id="p-tu" aria-labelledby="t-tu" hidden>
+      <div>
+        <div class="meta"><b>Jul 2019 – Apr 2022</b><span>Chicago, IL</span><span>Identity &amp; fraud · AWS</span></div>
+        <h3>TransUnion</h3>
+        <div class="role">Java Full Stack Developer</div>
+        <p class="pd">Customer identity verification and fraud-risk platform for new-account opening, loan processing, new-device access, document verification, OTP authentication and high-risk transaction review, integrating TruValidate and iovation.</p>
+        <ul>
+          <li><b>Cut p95</b> on slow verification queries from 1.8 s to 450 ms through Oracle indexing and execution-plan tuning, with Flyway-versioned schemas.</li>
+          <li><b>Decoupled</b> verification, OTP and fraud-risk processing on Kafka with consumer groups, correlation IDs, retries, idempotent processing and dead-letter topics.</li>
+          <li><b>Used gRPC</b> with Protocol Buffers for low-latency internal calls, and REST with OpenAPI contracts for TruValidate, iovation and banking integrations.</li>
+          <li><b>Cut MTTR</b> for verification incidents from 2 hours to 50 minutes with Splunk, Prometheus and Grafana, Cucumber suites and EKS deployments through CodePipeline.</li>
+        </ul>
+      </div>
+      <aside class="path t-sky" aria-label="Request path">
+        <span class="eyebrow">Request path</span>
+        <div class="node"><small>UI</small>Angular · TypeScript</div>
+        <div class="node"><small>Edge &amp; identity</small>API Gateway · Spring Security · OAuth 2.0</div>
+        <div class="node"><small>Services</small>Java 11 · Spring Boot 2.1 · REST + gRPC</div>
+        <div class="node"><small>Data</small>Oracle · TruValidate · iovation</div>
+        <div class="node"><small>Events</small>Apache Kafka · Amazon SNS</div>
+        <div class="node"><small>Run</small>EKS via CodePipeline · Splunk</div>
+        <div class="chips"><span class="chip">HashiCorp Vault</span><span class="chip">Spring Cloud Config</span><span class="chip">SAFe</span></div>
+      </aside>
+    </article>
+
+    <article class="panel" role="tabpanel" id="p-adp" aria-labelledby="t-adp" hidden>
+      <div>
+        <div class="meta"><b>Dec 2016 – Jun 2019</b><span>Roseland, NJ</span><span>HR &amp; payroll · Azure</span></div>
+        <h3>ADP</h3>
+        <div class="role">Java Full Stack Developer</div>
+        <p class="pd">HR, payroll and employee self-service platform: profiles, payroll processing, direct deposit, tax deductions, benefits enrolment, time and attendance, PTO and manager approvals.</p>
+        <ul>
+          <li><b>Built payroll services</b> for gross-to-net pay, federal and state tax withholding and benefit deductions, generating NACHA ACH files with Spring Batch for direct deposit.</li>
+          <li><b>Cut the nightly payroll batch</b> from 5 to 3.5 hours by automating reconciliation with ActiveMQ, Spring Batch and Azure Blob Storage staging.</li>
+          <li><b>Reduced repeated database calls ~30%</b> and page load from ~2 s to ~1.1 s with Oracle PL/SQL tuning, Liquibase-versioned changes and Redis caching.</li>
+          <li><b>Protected payroll PII</b> by masking SSNs and bank accounts in React self-service modules and encrypting them at rest in Oracle.</li>
+        </ul>
+      </div>
+      <aside class="path t-sage" aria-label="Request path">
+        <span class="eyebrow">Request path</span>
+        <div class="node"><small>UI</small>React 15/16 · Redux</div>
+        <div class="node"><small>Services</small>Java 8 · Spring Boot 1.4 · Spring Security</div>
+        <div class="node"><small>Data</small>Oracle · PL/SQL · Redis</div>
+        <div class="node"><small>Jobs</small>ActiveMQ · Spring Batch · NACHA files</div>
+        <div class="node"><small>Run</small>Azure App Service via Jenkins · Application Insights</div>
+      </aside>
+    </article>
+
+    <article class="panel" role="tabpanel" id="p-ms" aria-labelledby="t-ms" hidden>
+      <div>
+        <div class="meta"><b>May 2015 – Oct 2016</b><span>Mumbai, India</span><span>Retail e-commerce</span></div>
+        <h3>Mastek</h3>
+        <div class="role">Java Developer · for Total (now TotalEnergies)</div>
+        <p class="pd">Retail mobile storefront supporting product search, cart, checkout, order placement, customer profiles, order tracking and loyalty rewards.</p>
+        <ul>
+          <li><b>Implemented loyalty-rewards workflows</b> for enrolment, points, redemption validation and order-level benefits, validated against legacy loyalty data before go-live.</li>
+          <li><b>Raised automated coverage</b> from 55% to 80% across storefront services with JUnit suites and SonarQube fixes, with MySQL changes versioned in Flyway.</li>
+          <li><b>Integrated legacy systems</b> through Apache Camel routes and SOAP/XML services, tracking integration errors in Splunk.</li>
+        </ul>
+      </div>
+      <aside class="path t-butter" aria-label="Request path">
+        <span class="eyebrow">Request path</span>
+        <div class="node"><small>UI</small>AngularJS</div>
+        <div class="node"><small>Services</small>Java 8 · Spring Boot on Tomcat</div>
+        <div class="node"><small>Data</small>Hibernate/JPA · MySQL</div>
+        <div class="node"><small>Integration</small>Apache Camel · SOAP/XML</div>
+      </aside>
+    </article>
+  </section>
+
+  <section class="sec wrap" aria-labelledby="cap-h">
+    <div class="sec-head">
+      <span class="eyebrow">What I bring</span>
+      <h2 id="cap-h">Built for <em>regulated,</em> high-volume work.</h2>
+    </div>
+    <div class="caps">
+      <div class="cap t-lav"><h3>AI features with guardrails</h3><p>Spring AI search on Claude using RAG over Elasticsearch vectors, Vertex AI (Gemini) as fallback, and PII redaction on every prompt. Copilot and Claude speed up tests and PR reviews.</p><div class="chips"><span class="chip">Spring AI</span><span class="chip">Claude</span><span class="chip">Vertex AI</span><span class="chip">RAG</span></div></div>
+      <div class="cap t-peach"><h3>Events that never double-count</h3><p>Kafka and Pub/Sub pipelines with idempotent consumers, correlation IDs, retries and dead-letter topics, so redelivery and replay are safe by design.</p><div class="chips"><span class="chip">Kafka</span><span class="chip">Pub/Sub</span><span class="chip">RabbitMQ</span><span class="chip">SNS</span></div></div>
+      <div class="cap t-sage"><h3>Cloud moves without drama</h3><p>Service-by-service migration from PCF to GKE, Helm and Terraform for repeatable releases, and Flyway and Liquibase so schema changes ship with the code.</p><div class="chips"><span class="chip">GKE</span><span class="chip">EKS</span><span class="chip">Helm</span><span class="chip">Terraform</span></div></div>
+      <div class="cap t-sky"><h3>Secure by default</h3><p>Apigee and Okta SSO at the edge, OAuth 2.0 scopes in Spring Security, least-privilege IAM, secrets in Vault or Secret Manager, and Veracode scans in the pipeline.</p><div class="chips"><span class="chip">Okta</span><span class="chip">OAuth 2.0</span><span class="chip">Vault</span><span class="chip">Veracode</span></div></div>
+    </div>
+  </section>
+
+  <section class="sec wrap" id="work" aria-labelledby="work-h">
+    <div class="sec-head">
+      <span class="eyebrow">Case studies</span>
+      <h2 id="work-h">Problems I owned, <em>and how they ended.</em></h2>
+    </div>
+    <div class="cases">
+      <article class="case"><span class="who">Cardinal Health · Platform</span><div class="big">90 → 35</div><div class="lbl">minutes per release</div><p>Moved onboarding and fulfilment services from PCF (Tanzu) to GKE, one service at a time, with Concourse running build, test, scan and deploy.</p></article>
+      <article class="case"><span class="who">Cardinal Health · Data</span><div class="big">−40%</div><div class="lbl">pricing database reads</div><p>Gave each workload its own store and put pricing behind Memorystore cache-aside with TTL. p95 lookups fell from 350 to 120 ms at peak.</p></article>
+      <article class="case"><span class="who">Home Depot · Payments</span><div class="big">0</div><div class="lbl">double charges on retry</div><p>A PCI DSS payment service that authorizes at checkout and captures per shipment, with an idempotency key on every call.</p></article>
+      <article class="case"><span class="who">Home Depot · Concurrency</span><div class="big">~1 / mo</div><div class="lbl">duplicate-order tickets, down from a few a week</div><p>Persisted idempotency keys, order headers and line-level reservations in PostgreSQL before any downstream call.</p></article>
+      <article class="case"><span class="who">TransUnion · Performance</span><div class="big">450 ms</div><div class="lbl">p95 verification queries, down from 1.8 s</div><p>Indexing and execution-plan tuning on Oracle behind Spring Data JPA and Hibernate, without loosening consistency.</p></article>
+      <article class="case"><span class="who">Home Depot · Incident</span><div class="big">~70 min</div><div class="lbl">to restore a production P1</div><p>A Helm values change pointed production at a QA secret. I traced it through pod config, rolled back, and added a CI check on secret paths.</p></article>
+    </div>
+  </section>
+
+  <section class="sec wrap" aria-labelledby="trust-h">
+    <div class="band">
+      <div>
+        <h2 id="trust-h">Regulated domains, <em>handled with care.</em></h2>
+        <p>Four businesses where a duplicate event, a leaked secret or a wrong charge is a real problem. I design for those failure cases first.</p>
+      </div>
+      <div class="badges">
+        <div class="badge"><b>DSCSA · EPCIS</b><span>Pharma serialization and traceability</span></div>
+        <div class="badge"><b>PCI DSS</b><span>Tokenized cards, per-shipment capture</span></div>
+        <div class="badge"><b>NACHA</b><span>Payroll ACH files for direct deposit</span></div>
+        <div class="badge"><b>Identity &amp; fraud</b><span>TruValidate, iovation, OTP</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec wrap" id="stack" aria-labelledby="stack-h">
+    <div class="sec-head">
+      <span class="eyebrow">Stack</span>
+      <h2 id="stack-h">Tools I've <em>shipped with.</em></h2>
+    </div>
+    <div class="stack">
+      <div><h3>Backend</h3><p>Java 8 / 11 / 17 / 21, Spring Boot 1.x–3.x, Spring Security, Spring Data JPA, Spring Batch, Spring Kafka, Spring Cloud Config, Hibernate, Groovy, Python</p></div>
+      <div><h3>Frontend</h3><p>Angular 17/19, AngularJS, RxJS, React, Redux Toolkit, TypeScript, Node.js tooling, lazy loading, virtualized rendering</p></div>
+      <div><h3>AI</h3><p>Spring AI, Claude, Vertex AI (Gemini), RAG, vector search on Elasticsearch, PII redaction, GitHub Copilot</p></div>
+      <div><h3>APIs &amp; messaging</h3><p>REST, GraphQL, gRPC, SOAP/XML, OpenAPI, Apigee, Kafka, Google Pub/Sub, RabbitMQ, ActiveMQ, SNS, Camunda BPMN, Apache Camel, Airflow</p></div>
+      <div><h3>Data</h3><p>Oracle, PostgreSQL, MySQL, Cassandra, BigQuery, Redis, Varnish, Elasticsearch, Flyway, Liquibase, SQL &amp; PL/SQL tuning</p></div>
+      <div><h3>Cloud &amp; delivery</h3><p>GCP (GKE, Cloud SQL, Pub/Sub, BigQuery, Dataflow), AWS (EKS, RDS, S3, MWAA), Azure App Service, Docker, Kubernetes, Helm, Terraform, PCF, Concourse, Jenkins, Harness CD</p></div>
+      <div><h3>Security</h3><p>OAuth 2.0, JWT, RBAC, Okta SSO, GCP and AWS IAM, HashiCorp Vault, Veracode, PCI DSS, PII masking</p></div>
+      <div><h3>Quality &amp; observability</h3><p>JUnit 5, Mockito, Cucumber, Playwright, REST Assured, SonarQube, Splunk, Prometheus, Grafana, Cloud Monitoring</p></div>
+      <div><h3>Ways of working</h3><p>Agile and SAFe, story-card estimation, on-call and RCA, code reviews, mentoring</p></div>
+    </div>
+  </section>
+
+  <section class="sec wrap" id="faq" aria-labelledby="faq-h">
+    <div class="sec-head center">
+      <span class="eyebrow">FAQ</span>
+      <h2 id="faq-h">Good <em>questions.</em></h2>
+    </div>
+    <div class="faq">
+      <details open><summary>What roles are you open to?</summary><p>Senior Java Full Stack, Senior Backend Java and Java cloud roles on GCP or AWS, across the USA.</p></details>
+      <details><summary>Are you more frontend or backend?</summary><p>Backend-first, with real frontend depth: Java and Spring Boot microservices everywhere, plus Angular 17/19 at Cardinal Health, React at Home Depot and ADP, and Angular at TransUnion.</p></details>
+      <details><summary>Which clouds have you worked on?</summary><p>GCP at Cardinal Health (GKE, Cloud SQL, Pub/Sub, BigQuery, Memorystore), AWS at Home Depot and TransUnion (EKS, RDS, S3, MWAA, CodePipeline), and Azure App Service at ADP.</p></details>
+      <details><summary>How do you use AI in your work?</summary><p>In product: a Spring AI order search on Claude with RAG over Elasticsearch vectors, Vertex AI (Gemini) as fallback, and PII redaction on every prompt. Day to day: GitHub Copilot and Claude to draft tests and PR reviews.</p></details>
+      <details><summary>What regulated domains do you know?</summary><p>DSCSA serialization and EPCIS events in pharma supply chain, PCI DSS card payments with split-shipment capture, identity and fraud checks, and NACHA payroll files with PII protection.</p></details>
+      <details><summary>How do you work with a team?</summary><p>As a senior engineer on Agile and SAFe teams: I estimate story cards with product owners, join the on-call rotation, and mentor developers through code reviews.</p></details>
+    </div>
+  </section>
+
+  <section class="closing wrap" id="contact" aria-labelledby="contact-h">
+    <div class="face"><img src="assets/mrudula-cutout.webp" alt="" width="760" height="912"></div>
+    <h2 id="contact-h">Hiring a senior Java engineer? <em>Let's talk.</em></h2>
+    <p>The fastest way to reach me is LinkedIn or email. I usually reply the same day.</p>
+    <div class="cta">
+      <a class="btn" href="https://www.linkedin.com/in/mrudula-nimmala/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+    </div>
+    <div class="mail"><span id="email">mrudulan6@gmail.com</span><button type="button" id="copy">Copy email</button></div>
+  </section>
 </main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Mrudula Nimmala · B.Tech, Computer Science &amp; Engineering, JNTU Kakinada</span>
+    <span><a href="https://www.linkedin.com/in/mrudula-nimmala/" target="_blank" rel="noopener">LinkedIn</a> · <a href="mailto:mrudulan6@gmail.com">Email</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('[role="tab"]'));
+  function show(t){
+    tabs.forEach(function(x){
+      var on=x===t; x.setAttribute('aria-selected',on); x.tabIndex=on?0:-1;
+      document.getElementById(x.getAttribute('aria-controls')).hidden=!on;
+    });
+  }
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){show(t)});
+    t.addEventListener('keydown',function(e){
+      var d=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;
+      if(d){var n=tabs[(i+d+tabs.length)%tabs.length]; show(n); n.focus(); e.preventDefault();}
+    });
+  });
+  var b=document.getElementById('copy');
+  b.addEventListener('click',function(){
+    var txt=document.getElementById('email').textContent;
+    var done=function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy email'},1800)};
+    if(navigator.clipboard){navigator.clipboard.writeText(txt).then(done,function(){sel()})}else{sel()}
+    function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('email'));var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Press Ctrl+C'}
+  });
+})();
+</script>
+<noscript><style>.panel[hidden]{display:grid!important}.panel+.panel{margin-top:20px}.tabs{display:none}</style></noscript>
 </body>
 </html>
